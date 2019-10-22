@@ -1,0 +1,43 @@
+\documentclass[12pt]{report}
+% \usepackage{minted}
+\usepackage{xcolor}
+\definecolor{light-gray}{rgb}{0.9,0.9,0.9}
+% \usepackage{emptypage}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+% \usepackage[italian]{babel}
+\usepackage{graphicx}
+\graphicspath{ {immagini/} }
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[a4paper,width=150mm,top=30mm,bottom=30mm,left=30mm,right=30mm,bindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}
+\linespread{1.3}\selectfont
+
+\usepackage{titlesec}
+\titleformat{\chapter}{}{}{0em}{\bf\LARGE}
+
+\begin{document}
+    
+  % TODO: Fill title page
+  \begin{titlepage}
+    
+  \end{titlepage}
+  
+  \tableofcontents
+   
+  \chapter{Introduction}
+  \section{Purpose}
+  \input{Sections/1-Introduction/Purpose.tex}
+  \section{Scope}
+  \input{Sections/1-Introduction/Scope.tex}
+  
+  \chapter{Overall Description}
+  \section{Product perspective}
+  \input{Sections/2-Overall_Description/Product_perspective.tex}
+  
+
+\end{document}
+  
