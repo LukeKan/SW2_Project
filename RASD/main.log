@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.10.23)  23 OCT 2019 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.10.23)  24 OCT 2019 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -413,20 +413,20 @@ Chapter 1.
 Chapter 2.
 (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Product_perspective.tex) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/User_characteristics.tex) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Constraints.tex [4
 
-]) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Assumptions_dependencies.tex [5]) [6] (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/main.aux) ) 
+]) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Assumptions_dependencies.tex [5] [6]) [7] (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/main.aux) ) 
 Here is how much of TeX's memory you used:
- 4722 strings out of 492641
- 69993 string characters out of 6131786
+ 4723 strings out of 492641
+ 70016 string characters out of 6131786
  139857 words of memory out of 5000000
- 8535 multiletter control sequences out of 15000+600000
+ 8536 multiletter control sequences out of 15000+600000
  12803 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,43p,1092b,185s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,5n,43p,1092b,257s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on /home/luke/Progetto_sw2/AlbergoniLoria/RASD/main.pdf (6 pages, 113408 bytes).
+Output written on /home/luke/Progetto_sw2/AlbergoniLoria/RASD/main.pdf (7 pages, 120009 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
