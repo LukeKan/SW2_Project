@@ -1,0 +1,14 @@
+\subsection{Send a report}
+This is one of the most important function of the service. After the user has successfully registered/logged into the application he can choose to send a report of a violation to the officers. This is performed by taking a picture of the car that committed the violation. After the phone took the picture the application asks the user to add some textual information about the event. Whene this information are provided the application gathers some other data in order to have a correct and useful report. In patricular it gets: 
+\begin{itemize}
+  \item The data related to the user who wish to sent the report (User ID)
+  \item The local time and date gathered from the phone OS
+  \item The information about the street where the user took the picture. (Obtained by the GPS coordinates of the user)
+\end{itemize}
+
+% TODO: Check if these are good
+The user can also optionally add the car plate numbers and the name of the street in case, for example, the application misrecognized the street form the GPS coordinates. When all the necessary data are correctly gathered the report is sent to the backend system that will handle the request. The user can then consult the history section of the application to monitor the status of its report.
+
+\subsection{Receiving a report - Plate recognition}
+When the backend system receives a new report 
+
