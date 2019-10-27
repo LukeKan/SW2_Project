@@ -1,4 +1,4 @@
-As far as the specification document is concerned, it is necessary to specify some details and to state clearly a few ambiguous points. In order to better clarify those situations the following assumptions are intoduced.
+As far as the specification document is concerned, it is necessary to specify some details and to state clearly a few ambiguous points. In order to better clarify those situations, the following assumptions are intoduced.
 \subsection{Text Assumptions}
 \begin{itemize}
     \item \textbf{Violation report}
@@ -6,17 +6,17 @@ As far as the specification document is concerned, it is necessary to specify so
             \item The information sent by user in the violation report includes: the license plate image and an optional textual transcription, its position coordinates (extracted automatically from the smartphone GPS) and the violation metadata;
             \item The suitable metadata descripted in the specification document is intended as a choice of the law infringment and a textual description of the event;
             \item Given the coordinates of the violation, the system is able to retrieve the address from which the report was sent;
-            \item Every time a report is received, the system will ask the image recognition service for the license plate textual transcription.
-            \item A license plate textual transcription is considered correct if it fits into one of the common standard of the EU states. In case of wrong textual transcription of the license plate from the image recognition service:
+            \item Every time a report is received, the system will ask the image recognition service for the license plate textual transcription;
+            \item A license plate textual transcription is considered correct if it fits into one of the common standards of the EU states. In case of wrong textual transcription of the license plate from the image recognition service:
             \begin{itemize}
-                \item The textual transcription provided by the user is taken into account. After a previous check, the provided license plate will be considered as correct.
+                \item The textual transcription provided by the user is taken into account. After a previous check, the provided license plate will be considered as correct;
                 \item If the user has not sent a textual transcription, the violation is not associated to any license plate number;
             \end{itemize} 
         \end{itemize}
     \item \textbf{Mining information} 
         \begin{itemize}
-            \item End users are allowed to mine information about the violation reports that they sent. Also, they can have access only to the (map visualization or list) streets with the highest frequency of violation reports (called "most dangerous" streets (MDS) from now on);
-            \item Authorities can mine information concerning all the stored information in the SafeStreet system, such as MDS or the list of cars with an high number of violation reports.
+            \item End users are allowed to mine information about the violation reports that they sent. Also, they can have access only to the (map visualization or list) MDS;
+            \item Authorities can mine information concerning all the stored reports in the SafeStreet system, such as MDS or the list of cars with an high number of violation reports;
         \end{itemize}
     \item \textbf{Suggested intervention}
         \begin{itemize}
@@ -39,5 +39,3 @@ As far as the specification document is concerned, it is necessary to specify so
     \item {[D12]} The image recognition service is able to detect and transcribe license plates.
 \end{itemize}
 
-
-%TODO add the acronyms of EU, CET and MDS
