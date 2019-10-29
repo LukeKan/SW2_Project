@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.10.23)  27 OCT 2019 17:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.10.23)  29 OCT 2019 08:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -503,36 +503,40 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [2]
 Chapter 1.
-(/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Purpose.tex) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Scope.tex [3
+(/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Purpose.tex (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Goals.tex [3
 
-] (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Goals.tex [4])) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Definitions_acronyms_abbreviations.tex [5]) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/References.tex) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Revision_history.tex) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Overview.tex) [6]
+])) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Scope.tex [4]) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Definitions_acronyms_abbreviations.tex) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/References.tex) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Revision_history.tex) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/1-Introduction/Overview.tex [5]) [6]
 Chapter 2.
-(/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Product_perspective.tex [7
+(/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Product_perspective.tex) [7
 
-]) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Product_functions.tex [8]) [9] (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/User_characteristics.tex) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Constraints.tex [10]) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Assumptions_dependencies.tex [11] [12])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 39.
- [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
+] (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Product_functions.tex [8]) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/User_characteristics.tex [9]) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/2-Overall_Description/Assumptions_dependencies.tex [10] [11]) [12]
+Chapter 3.
+(/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/3-Specific_Requirements/External_interface_requirements.tex [13
+
+]) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/3-Specific_Requirements/Performance_requirements.tex) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/3-Specific_Requirements/Design_constraints.tex [14]) (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/Sections/3-Specific_Requirements/Software_system_attributes.tex [15])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
+ [16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
  (/home/luke/Progetto_sw2/AlbergoniLoria/RASD/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 39.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 39.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E233964664C8C0A585C11A0974D4AAFF;1952.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 39.
+(rerunfilecheck)             Checksum: 460B037CC20A4396A0133E2D24817ADE;2857.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 8226 strings out of 492641
- 124378 string characters out of 6131786
+ 8266 strings out of 492641
+ 125661 string characters out of 6131786
  219744 words of memory out of 5000000
- 11948 multiletter control sequences out of 15000+600000
+ 11961 multiletter control sequences out of 15000+600000
  12803 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,6n,43p,1802b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,6n,43p,2486b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on /home/luke/Progetto_sw2/AlbergoniLoria/RASD/main.pdf (13 pages, 142416 bytes).
+Output written on /home/luke/Progetto_sw2/AlbergoniLoria/RASD/main.pdf (16 pages, 150296 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 235 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 340 PDF objects out of 1000 (max. 8388607)
+ 312 compressed objects within 4 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 337 words of extra memory for PDF output out of 10000 (max. 10000000)
 

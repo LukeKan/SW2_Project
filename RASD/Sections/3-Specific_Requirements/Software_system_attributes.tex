@@ -1,0 +1,28 @@
+\subsection{Reliability}
+The system needs to always be online in order to correctly store and 
+manage violation reports and to be robust in case of failures. These 
+requirements can be guaranteed through a virtual replication of the 
+backend system: a possible solution
+could be implemented through Docker containers managed by a container
+orchestrion such as Kubernetes or DockerCompose. The container architecture
+automatically restarts containers in case of failures (fault tollerant)
+guaranteeing the system functioning in every situation.
+\subsection{Availability}
+As previously stated, the system must always guarantee an operating service of
+violation reports. Thus, the system has to be available 
+under stressing condition of an high number of users.
+\subsection{Security}
+As the data transferred and stored in the SafeStreets system deals with
+private citizen's data, it must be guaranteed an high level of security.
+In order to meet the GDPR conditions, all data has to be correctly 
+encrypted through several security methods before being sent and stored.
+\subsection{Maintainability}
+The software maintainability is one of the most critical aspect in the
+development of this software. In order to allow cheap and easy fix, SafeStreets
+is developed by using several design patterns that make the software
+flexible and scalable. Such patterns can be recognized both in the previous
+UML class diagram and in further documents.
+\subsection{Portability}
+SafeStreets is intended to work on every mobile device, thus the technologies
+used for its development have to be cross-platform (such as Flutter or any other
+language which can generate applications for IOS and Android systems).
