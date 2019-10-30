@@ -49,6 +49,10 @@ INPUT c:/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT c:/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT c:/texlive/2019/texmf-dist/tex/latex/tools/enumerate.sty
 INPUT c:/texlive/2019/texmf-dist/tex/latex/tools/enumerate.sty
+INPUT c:/texlive/2019/texmf-dist/tex/latex/tools/array.sty
+INPUT c:/texlive/2019/texmf-dist/tex/latex/tools/array.sty
+INPUT c:/texlive/2019/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT c:/texlive/2019/texmf-dist/tex/latex/tools/tabularx.sty
 INPUT c:/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT c:/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT c:/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty

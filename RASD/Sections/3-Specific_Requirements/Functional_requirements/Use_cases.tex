@@ -1,25 +1,54 @@
-\begin{tabular}{|p{3.7cm}|p{11cm}|}
-  \hline
-  Name & Sign Up\\
-  \hline
-  Actors & Visitor\\
-  \hline
-  Entry Condition & The visitor has opened the application on his device\\
-  \hline
-  Event flow & \begin{enumerate}
-                  \item The Visitor chooses the Sign Up option;
-                  \item The Visitor fills the mandatory fields regarding his personal data (i.e. email, password);
-                  \item The Visitor fills the optional fields (i.e. Name,Surname, age)
-                  \item The Visitor confirms the registration;
-                  \item The system saves the information and creates the User account.
-              \end{enumerate}\\
-  \hline
-  Exit condition & The User is registered.\\
-  \hline
-  Exception & \begin{enumerate}
-                \item The user was already registered 
-              \end{enumerate}\\
-  \hline
-  Special requirement & TBD.\\
-  \hline
-  \end{tabular}
+% \begin{tabular}{|p{3.7cm}|p{11cm}|}
+%   \hline
+%   Name & Sign Up\\
+%   \hline
+%   Actors & Visitor\\
+%   \hline
+%   Entry Condition & The visitor has opened the application on his device\\
+%   \hline
+%   Event flow & \begin{enumerate}
+%                   \item The Visitor chooses the Sign Up option;
+%                   \item The Visitor fills the mandatory fields regarding his personal data (i.e. email, password);
+%                   \item The Visitor fills the optional fields (i.e. Name,Surname, age)
+%                   \item The Visitor confirms the registration;
+%                   \item The system saves the information and creates the User account.
+%               \end{enumerate}\\
+%   \hline
+%   Exit condition & The User is registered.\\
+%   \hline
+%   Exception & \begin{enumerate}
+%                 \item The user was already registered. In this case the application warns the user that there is another account associated to the specified email;
+%                 \item The user does not fills all the mandatory fields. In that case the application warns the user by highlighting the empty fields.
+%               \end{enumerate}\\
+%   \hline
+%   \end{tabular}
+
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.5\hsize}X}
+
+  \begin{tabularx}{\textwidth}{|s|b|}
+    \hline
+    Name & Sign Up\\
+    \hline
+    Actors & Visitor\\
+    \hline
+    Entry Condition & The visitor has opened the application on his device\\
+    \hline
+    Event flow & \begin{enumerate}
+                    \item The Visitor chooses the Sign Up option;
+                    \item The Visitor fills the mandatory fields regarding his personal data (i.e. email, password);
+                    \item The Visitor fills the optional fields (i.e. Name,Surname, age)
+                    \item The Visitor confirms the registration;
+                    \item The system saves the information and creates the User account.
+                \end{enumerate}\\
+    \hline
+    Exit condition & The User is registered.\\
+    \hline
+    Exception & \begin{enumerate}
+                  \item The user was already registered. In this case the application warns the user that there is another account associated to the specified email;
+                  \item The user does not fills all the mandatory fields. In that case the application warns the user by highlighting the empty fields.
+                \end{enumerate}\\
+    \hline
+  \end{tabularx}
+  
+

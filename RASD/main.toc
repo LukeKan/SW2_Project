@@ -48,4 +48,4 @@
 \contentsline {subsection}{\numberline {3.5.2}Availability}{19}{subsection.3.5.2}% 
 \contentsline {subsection}{\numberline {3.5.3}Security}{19}{subsection.3.5.3}% 
 \contentsline {subsection}{\numberline {3.5.4}Maintainability}{19}{subsection.3.5.4}% 
-\contentsline {subsection}{\numberline {3.5.5}Portability}{19}{subsection.3.5.5}% 
+\contentsline {subsection}{\numberline {3.5.5}Portability}{20}{subsection.3.5.5}% 
