@@ -36,15 +36,16 @@
 \contentsline {subsubsection}{Scenario 3}{15}{subsubsection*.4}% 
 \contentsline {subsubsection}{Scenario 4}{15}{subsubsection*.5}% 
 \contentsline {subsubsection}{Scenario 5}{16}{subsubsection*.6}% 
-\contentsline {subsubsection}{}{16}{subsubsection*.7}% 
-\contentsline {section}{\numberline {3.3}Performance requirements}{16}{section.3.3}% 
-\contentsline {section}{\numberline {3.4}Design constraints}{16}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}Regulatory policies}{16}{subsection.3.4.1}% 
-\contentsline {subsection}{\numberline {3.4.2}Hardware limitations}{16}{subsection.3.4.2}% 
-\contentsline {subsection}{\numberline {3.4.3}Interface to other applications}{17}{subsection.3.4.3}% 
-\contentsline {section}{\numberline {3.5}Software system attributes}{17}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}Reliability}{17}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}Availability}{17}{subsection.3.5.2}% 
-\contentsline {subsection}{\numberline {3.5.3}Security}{18}{subsection.3.5.3}% 
-\contentsline {subsection}{\numberline {3.5.4}Maintainability}{18}{subsection.3.5.4}% 
-\contentsline {subsection}{\numberline {3.5.5}Portability}{18}{subsection.3.5.5}% 
+\contentsline {subsubsection}{Scenario 6}{16}{subsubsection*.7}% 
+\contentsline {subsection}{\numberline {3.2.2}Use cases}{17}{subsection.3.2.2}% 
+\contentsline {section}{\numberline {3.3}Performance requirements}{17}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Design constraints}{18}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Regulatory policies}{18}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Hardware limitations}{18}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {3.4.3}Interface to other applications}{18}{subsection.3.4.3}% 
+\contentsline {section}{\numberline {3.5}Software system attributes}{19}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Reliability}{19}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}Availability}{19}{subsection.3.5.2}% 
+\contentsline {subsection}{\numberline {3.5.3}Security}{19}{subsection.3.5.3}% 
+\contentsline {subsection}{\numberline {3.5.4}Maintainability}{19}{subsection.3.5.4}% 
+\contentsline {subsection}{\numberline {3.5.5}Portability}{19}{subsection.3.5.5}% 
