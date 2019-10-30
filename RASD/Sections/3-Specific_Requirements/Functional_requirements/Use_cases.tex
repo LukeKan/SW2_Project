@@ -1,54 +1,189 @@
-% \begin{tabular}{|p{3.7cm}|p{11cm}|}
-%   \hline
-%   Name & Sign Up\\
-%   \hline
-%   Actors & Visitor\\
-%   \hline
-%   Entry Condition & The visitor has opened the application on his device\\
-%   \hline
-%   Event flow & \begin{enumerate}
-%                   \item The Visitor chooses the Sign Up option;
-%                   \item The Visitor fills the mandatory fields regarding his personal data (i.e. email, password);
-%                   \item The Visitor fills the optional fields (i.e. Name,Surname, age)
-%                   \item The Visitor confirms the registration;
-%                   \item The system saves the information and creates the User account.
-%               \end{enumerate}\\
-%   \hline
-%   Exit condition & The User is registered.\\
-%   \hline
-%   Exception & \begin{enumerate}
-%                 \item The user was already registered. In this case the application warns the user that there is another account associated to the specified email;
-%                 \item The user does not fills all the mandatory fields. In that case the application warns the user by highlighting the empty fields.
-%               \end{enumerate}\\
-%   \hline
-%   \end{tabular}
-
-\newcolumntype{b}{X}
-\newcolumntype{s}{>{\hsize=.5\hsize}X}
-
-  \begin{tabularx}{\textwidth}{|s|b|}
+% Sign Up -------------------
+\begin{table}[H]
+  \centering
+  % \renewcommand{\arraystretch}{0.8}
+  \begin{tabularx}{\textwidth}{ |l|X| }
     \hline
     Name & Sign Up\\
     \hline
     Actors & Visitor\\
     \hline
-    Entry Condition & The visitor has opened the application on his device\\
+    Entry Conditions & The visitor has opened the application on his device\\
     \hline
-    Event flow & \begin{enumerate}
+    Event flow & \begin{enumerate}[noitemsep]
                     \item The Visitor chooses the Sign Up option;
                     \item The Visitor fills the mandatory fields regarding his personal data (i.e. email, password);
-                    \item The Visitor fills the optional fields (i.e. Name,Surname, age)
+                    \item The Visitor fills the optional fields (i.e. Name, Surname, age)
                     \item The Visitor confirms the registration;
                     \item The system saves the information and creates the User account.
                 \end{enumerate}\\
     \hline
-    Exit condition & The User is registered.\\
+    Exit conditions & The User is registered.\\
     \hline
-    Exception & \begin{enumerate}
+    Exceptions & \begin{enumerate}[noitemsep]
                   \item The user was already registered. In this case the application warns the user that there is another account associated to the specified email;
                   \item The user does not fills all the mandatory fields. In that case the application warns the user by highlighting the empty fields.
                 \end{enumerate}\\
     \hline
   \end{tabularx}
-  
+\end{table}
+% Log in --------------------
+\begin{table}[H]
+  \centering
+  % \renewcommand{\arraystretch}{0.8}
+  \begin{tabularx}{\textwidth}{ |l|X| }
+    \hline
+    Name & Log in\\
+    \hline
+    Actors & User\\
+    \hline
+    Entry Conditions & \begin{enumerate}[noitemsep]
+                        \item The User has opened the application on his device;
+                        \item The User has already done the Sign Up activity.
+                      \end{enumerate}\\
+    \hline
+    Event flow & \begin{enumerate}[noitemsep]
+                    \item The User chooses the Log-In  option;
+                    \item The User fills the email and password fields required for the authentication;
+                    \item The User presses the login button.
+                \end{enumerate}\\
+    \hline
+    Exit conditions & The User is logged and the application homepage is displayed on the screen.\\
+    \hline
+    Exceptions & \begin{enumerate}[noitemsep]
+                  \item The User enters the wrong email;
+                  \item The User enters the wrong password.
+                \end{enumerate}\\
+    \hline
+  \end{tabularx}
+\end{table}
+% Send report ---------------
+\begin{table}[H]
+  \centering
+  % \renewcommand{\arraystretch}{0.8}
+  \begin{tabularx}{\textwidth}{ |l|X| }
+    \hline
+    Name & Send report\\
+    \hline
+    Actors & User\\
+    \hline
+    Entry Conditions & \begin{enumerate}[noitemsep]
+                        \item The User has opened the application on his device;
+                        \item The User has already done the Log in activity.
+                      \end{enumerate}\\
+    \hline
+    Event flow & \begin{enumerate}[noitemsep]
+                    \item The User presses the button to send a report;
+                    \item The User takes a picture of the event;
+                    \item The application displays a miniature of the picture and the location information retrieved from the phone's GPS;
+                    \item The User chooses the category associated with the type of violation that he wants to report;
+                    \item The User optionally adds the plate number of the car and a short description of the violation;
+                    \item The User sends the report.
+                \end{enumerate}\\
+    \hline
+    Exit conditions & \begin{enumerate}[noitemsep]
+                        \item  The report has been correctly received by the backend system;
+                        \item The User can see the status of his report on the homepage of the application.
+                      \end{enumerate}\\
+    \hline
+    Exceptions & \begin{enumerate}[noitemsep]
+                  \item The User did not choose the category of violation. The application warns the user to select one type of violation;
+                  \item The application misrecognized the location from the GPS. In this case the User can modify the location information.
+                \end{enumerate}\\
+    \hline
+  \end{tabularx}
+\end{table}
+% Watch the MDS -------------
+\begin{table}[H]
+  \centering
+  % \renewcommand{\arraystretch}{0.8}
+  \begin{tabularx}{\textwidth}{ |l|X| }
+    \hline
+    Name & Watch the MDS\\
+    \hline
+    Actors & User\\
+    \hline
+    Entry Conditions & \begin{enumerate}[noitemsep]
+                        \item The User has opened the application on his device;
+                        \item The User has already done the Log in activity.
+                      \end{enumerate}\\
+    \hline
+    Event flow & \begin{enumerate}[noitemsep]
+                    \item The User navigates to the map section;
+                    \item The system displays the MDS of the surrounding area centred on the current position of the User;
+                    \item If the User chooses a specific address then the MDS will be searched in the area around that address.                
+                \end{enumerate}\\
+    \hline
+    Exit conditions & The User watches the MDS around a specific area. \\ 
+    \hline
+    Exceptions & The Users inserted an non-existent address. The application warns the User that such address does not exists.
+                \\
+    \hline
+  \end{tabularx}
+\end{table}
+% Mine information -----------
+\begin{table}[H]
+  \centering
+  % \renewcommand{\arraystretch}{0.8}
+  \begin{tabularx}{\textwidth}{ |l|X| }
+    \hline
+    Name & Mine information\\
+    \hline
+    Actors & Local system administrator, Police technician\\
+    \hline
+    Entry Conditions & \begin{enumerate}[noitemsep]
+                        \item The Operator has the SafeStreets Web application opened;
+                        \item The Operator have already logged in the Web application. 
+                      \end{enumerate}\\
+    \hline
+    Event flow & \begin{enumerate}[noitemsep]
+                    \item The Operator selects the option to search information;
+                    \item The Operator inserts his desired search criteria;
+                    \item The system performs the query based on the inserted filters;
+                    \item The system returns the results of the query.              
+                \end{enumerate}\\
+    \hline
+    Exit conditions & The Operator is provided with the desired results.\\ 
+    \hline
+    Exceptions & The Operator inserted a set of criteria which leads to no results. In that case the Web application warns the Operator with a message that says that no records were found that satisfy the requested query. \\
+    \hline
+  \end{tabularx}
+\end{table}
+% Create police technician accounts
+\begin{table}[H]
+  \centering
+  % \renewcommand{\arraystretch}{0.8}
+  \begin{tabularx}{\textwidth}{ |l|X| }
+    \hline
+    Name & Create Police Technician accounts \\
+    \hline
+    Actors & Local system administrator\\
+    \hline
+    Entry Conditions & \begin{enumerate}[noitemsep]
+                        \item The LSA has the SafeStreets Web application opened;
+                        \item The LSA have already logged in the Web application;
+                        \item The LSA have the mandatory information needed to create a Police technician account.
+                      \end{enumerate}\\
+    \hline
+    Event flow & \begin{enumerate}[noitemsep]
+                    \item The LSA selects the "Create Accounts" section in the Web application;
+                    \item The LSA insert the mandatory data related to the police officer account that he wants to create (i.e. email, password, badge number);
+                    \item The LSA chooses the confirmation option;
+                    \item The system saves the new account.
+                \end{enumerate}\\
+    \hline
+    Exit conditions & The new Police technician account has correctly been created.\\ 
+    \hline
+    Exceptions &  \begin{enumerate}[noitemsep]
+                    \item There exist another account with the specified information. The system warns the LSA that an account for that officer already exists;
+                    \item The LSA does not fill all the required fields. The Web application warns the user to fill in all the required information.
+                  \end{enumerate}\\
+    \hline
+  \end{tabularx}
+\end{table}
 
+% Assign reports to technician 
+
+% Consult assigned reports 
+
+% Consult the reports
