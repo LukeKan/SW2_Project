@@ -183,7 +183,67 @@
 \end{table}
 
 % Assign reports to technician 
+\begin{table}[H]
+  \centering
+  % \renewcommand{\arraystretch}{0.8}
+  \begin{tabularx}{\textwidth}{ |l|X| }
+    \hline
+    Name & Assign reports to technician \\
+    \hline
+    Actors & Local system administrator, Police technician\\
+    \hline
+    Entry Conditions & \begin{enumerate}[noitemsep]
+                        \item The LSA has the SafeStreets Web application opened;
+                        \item The LSA have already logged in the Web application;
+                        \item The Police technicians have an account registered by the LSA.
+                      \end{enumerate}\\
+    \hline
+    Event flow & \begin{enumerate}[noitemsep]
+                    \item The LSA selects the "Schedule" section in the Web application;
+                    \item The LSA chooses which violations need one or more Police technician assigned;
+                    \item The LSA selects the officers that he wants to assign to the violation;
+                    \item The LSA confirms the assignment;
+                    \item The system register the schedule.           
+                \end{enumerate}\\
+    \hline
+    Exit conditions & The Police technicians are provided with the violations to which they are associated.\\ 
+    \hline
+    Exceptions &  \begin{enumerate}[noitemsep]
+                    \item The LSA tries to assign officers to a violation with the status "Closed". In that case the application warns the LSA that the violation has already been resolved.
+                    \item The LSA tries to associate more than 5 technicians to the same violation. The application warns the LSA that the maximum number of Officers per violation is 5. 
+                  \end{enumerate}\\
+    \hline
+  \end{tabularx}
+\end{table}
 
+% TODO: is this good ?
 % Consult assigned reports 
-
+\begin{table}[H]
+  \centering
+  % \renewcommand{\arraystretch}{0.8}
+  \begin{tabularx}{\textwidth}{ |l|X| }
+    \hline
+    Name & Consult assigned reports \\
+    \hline
+    Actors & Police technician\\
+    \hline
+    Entry Conditions & \begin{enumerate}[noitemsep]
+                        \item The PT has the SafeStreets Web application opened;
+                        \item The PT have already logged in the Web application.
+                      \end{enumerate}\\
+    \hline
+    Event flow & \begin{enumerate}[noitemsep]
+                    \item The PT selects the "Schedule" section in the Web application;
+                    \item The system retrieves the violation reports associated to the PT;
+                    \item The Web application displays to the PT the list of violations to which he is assigned;
+                    \item The PT can inspect the details of each violation;
+                    \item The PT can modify the status of the violation. If he chooses to close the violation the report will then be archived.           
+                \end{enumerate}\\
+    \hline
+    Exit conditions & The Police technician is provided with the information regarding the reports to which he is assigned.\\ 
+    \hline
+    Exceptions &  There are no violations assigned to the PT. The Web application then warns the user that there is nothing on his schedule. \\
+    \hline
+  \end{tabularx}
+\end{table}
 % Consult the reports
