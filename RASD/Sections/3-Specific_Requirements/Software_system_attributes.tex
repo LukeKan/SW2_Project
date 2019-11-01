@@ -1,16 +1,8 @@
 \subsection{Reliability}
-The system needs to always be online in order to correctly store and 
-manage violation reports and to be robust in case of failures. These 
-requirements can be guaranteed through a virtual replication of the 
-backend system: a possible solution
-could be implemented through Docker containers managed by a container
-orchestrion such as Kubernetes or DockerCompose. The container architecture
-automatically restarts containers in case of failures (fault tollerant)
-guaranteeing the system functioning in every situation.
+The system needs to always be online in order to correctly store and manage violation reports and to be robust in case of failures. Moreover a cloud based database can be used in order to guarantee data redundancy and fast access. 
 \subsection{Availability}
-As previously stated, the system must always guarantee an operating service of
-violation reports. Thus, the system has to be available 
-under stressing condition of an high number of users.
+As previously stated, the system must always guarantee an operating service of violation reports. These requirements can be guaranteed through a virtual replication of the backend system: a possible solution could be implemented through Docker containers managed by a container orchestrion such as Kubernetes or DockerCompose. The container architecture automatically restarts containers in case of failures (fault tolerant) guaranteeing the system functioning in every situation.
+
 \subsection{Security}
 As the data transferred and stored in the SafeStreets system deals with
 private citizen's data, it must be guaranteed an high level of security.
@@ -23,6 +15,4 @@ is developed by using several design patterns that make the software
 flexible and scalable. Such patterns can be recognized both in the previous
 UML class diagram and in further documents.
 \subsection{Portability}
-SafeStreets is intended to work on every mobile device, thus the technologies
-used for its development have to be cross-platform (such as Flutter or any other
-language which can generate applications for IOS and Android systems).
+The SafeStreets mobile application is intended to work on every mobile device, thus the technologies used for its development have to be cross-platform (such as Flutter or any other language which can generate applications for IOS and Android systems).

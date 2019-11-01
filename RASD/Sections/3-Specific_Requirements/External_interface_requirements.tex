@@ -49,7 +49,7 @@ This section shows a mockup version of the main functionalities of the mobile ap
         \label{fig:login_web}
     \end{figure}
     The Figure \ref{fig:login_web} represents the login form of the SafeStreets
-    web application. The user can login through his username
+    web application. The officer can login through his username
     and password.
     \begin{figure}[H]
         \centering
@@ -69,9 +69,7 @@ This section shows a mockup version of the main functionalities of the mobile ap
     \end{figure}
     The figure \ref{fig:report_web} represents the specific violations report
     page of the SafeStreets web application. 
-    The local system administrator is able to look at the full violation report.
-    Also, he/she is able to change the report status from Pending to Solved (or viceversa)
-    and allocate/deallocate police technicians from this specific report.
+    Both the LSA and the PT are able to look at the full violation report and they can change the report status from Pending to Closed (or viceversa). However, the LSA only can allocate/deallocate police technicians from this specific report.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{mine_web}
@@ -85,15 +83,10 @@ This section shows a mockup version of the main functionalities of the mobile ap
 
 \subsection{Hardware Interfaces}
 SafeStreets do not require any specific hardware device, 
-thus there are no hardware interfaces to other existing systems
+thus there are no hardware interfaces to other existing systems.
 \subsection{Software Interfaces}
 SafeStreets is a standalone service and does not share any API to 
-external systems. However, the system requires the interaction with the 
-Image recognition service and with the municipality's legacy system
-to perform its tasks. \newline
-The software requires a standard format in order to retrieve car accident
-data from the municipality's system. Such standard will be specified more 
-in details in the DD.
-\subsection{Comunication Interfaces}
-External services are not allowed to interact actively with SafeStreets, therefore
-the system does not offer any comunication interface to external systems.
+external systems. However, the system requires the interaction with the Image recognition service and with the municipality's legacy system to perform its tasks. The software requires a standard format in order to retrieve car accident
+data from the municipality's system. Such standard will be specified more in details in the DD.
+\subsection{Communication Interfaces}
+External services are not allowed to interact actively with SafeStreets, therefore the system does not offer any communication interface to external systems.
