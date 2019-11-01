@@ -181,7 +181,6 @@
     \hline
   \end{tabularx}
 \end{table}
-
 % Assign reports to technician 
 \begin{table}[H]
   \centering
@@ -215,7 +214,6 @@
     \hline
   \end{tabularx}
 \end{table}
-
 % TODO: is this good ?
 % Consult assigned reports 
 \begin{table}[H]
@@ -246,4 +244,37 @@
     \hline
   \end{tabularx}
 \end{table}
-% Consult the reports
+% Ask for suggestions
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{0.6}
+  \begin{tabularx}{\textwidth}{ |l|X| }
+    \hline
+    Name & Ask for suggestions \\
+    \hline
+    Actors & Local System Administrator, Police technician\\
+    \hline
+    Entry Conditions & \begin{enumerate}[noitemsep]
+                        \item The Operator has the SafeStreets Web application opened;
+                        \item The Operator have already logged in the Web application;
+                        \item The municipality offers a service to retrieve data related to car accidents.
+                      \end{enumerate}\\
+    \hline
+    Event flow & \begin{enumerate}[noitemsep]
+                    \item The Operator selects the "Intervention suggestions" section in the Web application;
+                    \item The system asks to the municipality service the data about car accidents happened in the city;
+                    \item The system crosses the data received with the violations report submitted in the city;
+                    \item The system finds the area where there is a strong correlation between car accidents and violations;
+                    \item The system, based on the type of violations, tries to suggest some possible interventions to do on those areas;
+                    \item The system displays a list of interventions for each unsafe area.
+                    \end{enumerate}\\
+    \hline
+    Exit conditions & The Operator is provided with a list of possible suggestions.\\ 
+    \hline
+    Exceptions &  \begin{enumerate}
+                    \item The system cannot find a correlation between the information, therefore it is not able to calculate suggestions. In that case the application warns the Operator that no possible interventions have been found;
+                    \item The data sent by the municipality are few compared to the violations (or viceversa) so the system cannot make accurate suggestion. In that case the application warns the Operator that not enough data were provided in order to compute possible interventions.
+                  \end{enumerate} \\
+    \hline
+  \end{tabularx}
+\end{table}
