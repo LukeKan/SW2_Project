@@ -1,0 +1,38 @@
+\begin{itemize}
+  \item \textbf{{[G1]}: Allow the user to send a violation report consisting in a picture and some metadata;}
+    \begin{itemize}
+      \item {[R1]}: The mobile application must be able to gather all the required data such as: location, date and time from the user's device;
+      \item {[R2]}: The mobile application has to allow the user to choose between different categories of violations;
+      \item {[R3]}: The mobile application has to allow the user to optionally add information about the event and the car plate number;
+      \item {[R4]}: The mobile application has to allow the user to retake the picture if desired;
+      \item {[R5]}: The mobile application must be able to interact with the backend system to send/retrieve information;
+      \item {[R6]}: The backend system must be able to send the violation image to the plate recognition service in order to retrieve the car plate number from the image;
+      \item {[R7]}: Once the car plate number has been retrieved the system must save the report information in the database;
+      \item {[D1]}: A picture taken with a smartphone is performed with a quality sufficient for the image recognition service to transcribe it;
+      \item {[D2]}: The reported picture contains only the license plate of the car that committed the violation and not others;
+      \item {[D3]}: The GPS information collected from the smartphone of a user has an accuracy of less than 5 meters;
+      \item {[D4]}: The timestamp collected from the smartphone is synchronized with the CET standard;
+      \item {[D5]}: The users can only report violations occurred in Europe;
+      \item {[D6]}: Reports are only sent through a secure connection channel;
+      \item {[D7]}: The users reports all the violation that they detect;
+      \item {[D8]}: The users send report containing correct information about the detected violation.
+    \end{itemize}
+  \item \textbf{{[G2]}: Allow the user to watch the history of his reports and their status;}
+    \begin{itemize}
+      \item {[R5]}: The mobile application must be able to interact with the backend system to send/retrieve information;
+      \item {[R8]}: The backend system must retrieve the latest reports submitted by the user from the database. Once the data are gathered, the backend system must send them to the mobile application that will display them;
+      \item {[R9]}: The user must be able to consult the status associated with each report;
+      \item {[D6]}: Reports are only sent through a secure connection channel;
+    \end{itemize}
+  \item \textbf{{[G3]}: Allow the user to watch on map areas and streets with an high frequency of violations;}
+    \begin{itemize}
+      \item {[R5]}: The mobile application must be able to interact with the backend system to send/retrieve information;
+      \item {[R10]}: The application has to allow the user to insert an address near which to search the MDS. If no address is provided the application will instead search the MDS near the current position of the user (collected from the GPS);
+      \item {[R11]}: The backend system must calculate the MDS close to the given location;
+      \item {[R12]}: The mobile application must enlighten on the map the MDS;
+    \end{itemize}
+  \item \textbf{{[G.4]}: Allow the local system administrator of the police station to create accounts for the police technicians;}
+    \begin{itemize}
+      \item 
+    \end{itemize}
+\end{itemize}
