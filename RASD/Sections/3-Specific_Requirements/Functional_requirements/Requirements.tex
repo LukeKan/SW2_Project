@@ -1,3 +1,4 @@
+% TODO: check if something is missing
 \begin{itemize}
   \item \textbf{{[G1]}: Allow the user to send a violation report consisting in a picture and some metadata;}
     \begin{itemize}
@@ -15,7 +16,7 @@
       \item {[D5]}: The users can only report violations occurred in Europe;
       \item {[D6]}: Reports are only sent through a secure connection channel;
       \item {[D7]}: The users reports all the violation that they detect;
-      \item {[D8]}: The users send report containing correct information about the detected violation.
+      \item {[D8]}: The users send report containing correct information about the detected violation;
     \end{itemize}
   \item \textbf{{[G2]}: Allow the user to watch the history of his reports and their status;}
     \begin{itemize}
@@ -31,8 +32,44 @@
       \item {[R11]}: The backend system must calculate the MDS close to the given location;
       \item {[R12]}: The mobile application must enlighten on the map the MDS;
     \end{itemize}
-  \item \textbf{{[G.4]}: Allow the local system administrator of the police station to create accounts for the police technicians;}
+  \item \textbf{{[G4]}: Allow the local system administrator of the police station to create accounts for the police technicians;}
     \begin{itemize}
-      \item 
+      \item {[R13]}: The Web application must be able to interact with the backend system to send/retrieve information;
+      \item {[R14]}: The Web application must provide a special interface for the LSA in order to perform special task reserved for his role;
+      \item {[R15]}: The Web application must allow the LSA to securely create account reserved for PT;
+      \item {[R16]}: The Web application must allow the LSA to associate the PT's badge number with his related account;
+      \item {[R17]}: The system automatically generates a temporary password associated to the new account. Upon the first login, the application asks the PT to change the password;
+      \item {[R18]}: The system correctly registers the new accounts and allows access to the Web application to the PT registered;       
+    \end{itemize}
+  \item \textbf{{[G5]}: Allow the authorities to visualize, schedule and change the status of reports submitted by the users;}
+    \begin{itemize}
+      \item {[R13]}: The Web application must be able to interact with the backend system to send/retrieve information;
+      \item {[R19]}: The Web application allows the visualization of reports to both the LSA and the PTs via a dedicated section;
+      \item {[R20]}: The Web application allows the LSA to schedule reports to PT by associating their account to the report;
+      \item {[R21]}: The Web application allows PTs to visualize their scheduled reports;
+      \item {[R22]}: The Web application allows both the LSA and the PTs to change the status of reports (i.e. from "PENDING" to "SOLVED");
+      \item {[D13]}: The police corporates and technicians can manage only the violation reports that belong to their jurisdiction;
+      \item {[D14]}: The police technicians can only take care of the violations which are assigned to them by the police corporate;
+    \end{itemize}
+  \item \textbf{{[G6]}: Allow the authorities to mine data to make analysis and retrieve statistics;}
+    \begin{itemize}
+      \item {[R13]}: The Web application must be able to interact with the backend system to send/retrieve information;
+      \item {[R23]}: The Web application provides a section that can be used by both LSA and PTs to mine the data.
+      \item {[R24]}: The system must be able to collect the filter criteria inserted by the authorities and then compose a query that will be executed to retrieve the matching data;
+      \item {[R25]}: The Web application provides a section that can be used by both LSA and PTs to visualize statistics/metrics about the data;
+      \item {[R26]}: The system must offer some functionalities to calculate the most useful statistics/metrics related to the data;
+    \end{itemize}
+    
+  \item \textbf{{[G7]}: If the municipality offers a service that provides data about car accidents then the system must be able to cross this information with its owns data in order to identify possible unsafe areas;}
+    \begin{itemize}
+      \item {[R13]}: The Web application must be able to interact with the backend system to send/retrieve information;
+      \item {[R27]}: The Web application provides a section from which the authorities can ask for suggestions;
+      \item {[R28]}: The backend system must be able to communicate and retrieve data from the municipality service at any given time;
+      \item {[R29]}: The system has to merge and find correlations between the violations and the car accidents;
+      \item {[R30]}: The system has to identify potentially unsafe areas and then estimate possible interventions based on the correlations that have been found;
+      \item {[R31]}: Once the computation is over the Web application must display the suggested interventions on the interface along with the location;
+      \item {[D9]}: The municipality system stores correctly all the information concerning car accidents;
+      \item {[D10]}: The municipality system allows SafeStreet to retrieve information about the car accident among a certain area;
+      \item {[D11]}: The municipality system sends data accordingly to a common standard which is comprehensible by the SafeStreet system. 
     \end{itemize}
 \end{itemize}
