@@ -1,4 +1,3 @@
-% TODO: check if something is missing
 \begin{itemize}
   \item \textbf{{[G1]}: Allow the user to send a violation report consisting in a picture and some metadata;}
     \begin{itemize}
@@ -21,7 +20,7 @@
   \item \textbf{{[G2]}: Allow the user to watch the history of his reports and their status;}
     \begin{itemize}
       \item {[R5]}: The mobile application must be able to interact with the backend system to send/retrieve information;
-      \item {[R8]}: The backend system must retrieve the latest reports submitted by the user from the database. Once the data are gathered, the backend system must send them to the mobile application that will display them;
+      \item {[R8]}: The backend system must retrieve the latest reports submitted by the user from the database. Once the data is gathered, the backend system must send it to the mobile application that will display them;
       \item {[R9]}: The user must be able to consult the status associated with each report;
       \item {[D6]}: Reports are only sent through a secure connection channel;
     \end{itemize}
@@ -39,7 +38,8 @@
       \item {[R15]}: The Web application must allow the LSA to securely create account reserved for PT;
       \item {[R16]}: The Web application must allow the LSA to associate the PT's badge number with his related account;
       \item {[R17]}: The system automatically generates a temporary password associated to the new account. Upon the first login, the application asks the PT to change the password;
-      \item {[R18]}: The system correctly registers the new accounts and allows access to the Web application to the PT registered;       
+      \item {[R18]}: The system correctly registers the new accounts and allows access to the Web application to the PT registered;  
+      \item {[D14]}: The police corporates can manage only the police technicians of their jurisdiction.     
     \end{itemize}
   \item \textbf{{[G5]}: Allow the authorities to visualize, schedule and change the status of reports submitted by the users;}
     \begin{itemize}
@@ -49,7 +49,7 @@
       \item {[R21]}: The Web application allows PTs to visualize their scheduled reports;
       \item {[R22]}: The Web application allows both the LSA and the PTs to change the status of reports (i.e. from "PENDING" to "SOLVED");
       \item {[D13]}: The police corporates and technicians can manage only the violation reports that belong to their jurisdiction;
-      \item {[D14]}: The police technicians can only take care of the violations which are assigned to them by the police corporate;
+      \item {[D15]}: The police technicians can only take care of the violations which are assigned to them by the police corporate;
     \end{itemize}
   \item \textbf{{[G6]}: Allow the authorities to mine data to make analysis and retrieve statistics;}
     \begin{itemize}
@@ -59,7 +59,6 @@
       \item {[R25]}: The Web application provides a section that can be used by both LSA and PTs to visualize statistics/metrics about the data;
       \item {[R26]}: The system must offer some functionalities to calculate the most useful statistics/metrics related to the data;
     \end{itemize}
-    
   \item \textbf{{[G7]}: If the municipality offers a service that provides data about car accidents then the system must be able to cross this information with its owns data in order to identify possible unsafe areas;}
     \begin{itemize}
       \item {[R13]}: The Web application must be able to interact with the backend system to send/retrieve information;
