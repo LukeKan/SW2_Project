@@ -143,6 +143,11 @@ fact ownBossScheduling{
     all sv:ScheduledViolation | some t:Technician | t in sv.allocatedTechnicians iff t.boss=sv.scheduler
 }
 
+--At most 5 different technicians can be allocated to the same scheduled violation
+fact noMorethanFiveTechnPerViolation{
+    all v:ScheduledViolation | #(v.allocatedTechnicians)<6
+}
+
 --This function returns a (set in case of an intersection) of streets in which a certain violation occured
 fun getStreetsFromViolation[v:Violation] : set Street{
     v.address.streets
@@ -244,7 +249,6 @@ pred world3{
     #Parameter=0
     #Vehicle=1
     #SuggestedIntervention=0
-    some  t:Technician |some sv:ScheduledViolation | t in sv.allocatedTechnicians
     }
 
 run world3
