@@ -15,6 +15,9 @@ The specification document states that the license plate needs to be extracted f
 The system offers to both users and authorities the possibility to analyze the registered data although the level of visibility differs with respect to the utilizator. 
 Users can only see the streets with the highest frequency of violations via the map present in the mobile application. Authorities instead have a wider access to data, that is to say they can access to all registered reports. Via the Web application they can also perform queries on the database (only selection queries) to mine the desired data and compute statistics and metrics for a deeper analysis. The role based approach has been designed in order to guarantee the privacy of car owners with respect to the users of the application. Therefore they will only be allowed to consult for the MDS.
 
+\subsection{Scheduling technicians on violations}
+The system offers to LSAs the possibility to manage the violation reports by scheduling them to one or more of their technicians.
+Scheduled technicians will have the possibility to change the violation report status (from scheduled) to solved once they patrolled the street and confirmed/rejected the violation.
+
 \subsection{Crossing data with the municipality}
 The backend system offers the possibility to interact with an external service, offered by the municipality, that provides data regarding car accidents happened in the municipality area. SafeStreets can define the potential unsafe areas of the municipality by merging car accidents data and viaolation reports stored by the application. The system can then suggest to the local system administrator possible interventions in order to improve the safety of this areas. It is important to note that the data offered by this service need to be structured in a standard way recognizable by the backend system, otherwise the information crossing will not provide any results.
-
