@@ -5,4 +5,91 @@ SafeStreets is a service that aims to improve the safety of the streets via the 
 SafeStreets is a new service that it is entering the market. There aren't any legacy systems that need to be integrated into the application, with the exception of the third party services that offers some functionality required by the application (like Maps and plate recognition). Those services will be better explained in the following paragraphs.
 
 
+\subsection{Shared Phenomena}
 
+\begin{longtable}{| p{.60\textwidth} | p{.15\textwidth} | p{.15\textwidth} |} 
+    % \renewcommand{\arraystretch}{0.8}
+      \hline
+      Phenomenon & Shared & Who controls it \\
+      \hline
+      
+      The user detects and takes a picutre of a violation & N & W\\
+      \hline
+      The user sends a violation report & Y & W\\
+      \hline
+      The system performs the plate recognition from the report image & Y & W\\
+      \hline
+      The system stores the report and marks it as a pending violation& N & M\\
+      \hline
+      
+      The user wants to see his report history & N & W\\
+      \hline
+      The user asks the system to list his latest reports & Y & W\\
+      \hline
+      The system filters the current user reports& N & M\\
+      \hline
+      The system shows the list of current user reports& Y & M\\
+      \hline
+      
+      The user wants to see the most dangerous streets in a certain location& N & W\\
+      \hline
+      The system filters the current user location in order to find violations& N & M\\
+      \hline
+      The system determines the most dangerous violations& N & M\\
+      \hline
+      The system shows the list of the most dangerous streets in the specified location& Y & M\\
+      \hline
+      
+      The police corporate wants to register a newly hired technician& N & W\\
+      \hline
+      The police corporate submit the information to register a new technician account& Y & W\\
+      \hline
+      The system checks wether there is already an account registered to the new technician & N & M\\
+      \hline
+      The system rejects the new registration & Y & M\\
+      \hline
+      The system registers the new technician & Y & M\\
+      \hline
+
+      The authority wants to change the status of a violation & N & W\\
+      \hline
+      The authority specify the new status and sends the request to the system & Y & W\\
+      \hline
+      The system checks wether the violation occured in the jurisdiction of the authority & N & M\\
+      \hline
+      The system rejects the new request & Y & M\\
+      \hline
+      The system updates the status of the violation & Y & M\\
+      \hline
+      
+      The authority wants to schedule a violation to a set of police technicians & N & W\\
+      \hline
+      The authority submits the violation and the list of PT to the system & Y & W\\
+      \hline
+      The system checks wether the PT belongs to the asking authority& N & M\\
+      \hline
+      The system rejects the schedule request & Y & M\\
+      \hline
+      The system updates the agenda of the PTs and the list of allocated PTs on the violation & Y & M\\
+      \hline
+
+      The authority wants to mine information about a set of violations & N & W\\
+      \hline
+      The authority specify the list of filters and queries the system & Y & W\\
+      \hline
+      The system retrieves the list of violations that fit into the specified filters & N & M\\
+      \hline
+      The system shows the filtered list of violation reports & Y & M\\
+      \hline
+
+      The authority wants to receive suggestions about possible interventions in its jurisdiction & N & W\\
+      \hline
+      The authority asks the system for suggested intervention & Y & W\\
+      \hline
+      The system retrieves the list of accidents occured in the authority's jurisdiction from the municipality database & Y & M\\
+      \hline
+      The system computes a list of suggested violations & N & M\\
+      \hline
+      The system shows the list of suggested violations & Y & M\\
+      \hline
+  \end{longtable}

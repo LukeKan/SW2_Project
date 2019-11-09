@@ -208,7 +208,6 @@ fact NoDanglingResults{
     all r:Result | some mr:MiningResponse | mr.result=r
 }
 
--------------------------------------------------------------------
 pred world1{
     #Street=2
     #Location=2
@@ -222,7 +221,7 @@ pred world1{
     and some disj c1,c2:Coordinates | c1.x!=c2.x and c1.y!=c2.y and c1.y!=c2.x and c2.x!=c1.y
 }
 run world1 for 2 but 0 LSA, 0 Technician
--------------------------------------------------------------------
+
 pred world2{
     #Technician=1
     #User=1
@@ -239,7 +238,7 @@ pred world2{
     
 }
 run world2 
-------------------------------------------------------------------
+
 pred world3{
     #ScheduledViolation=1
     #Technician=1
@@ -252,7 +251,7 @@ pred world3{
     }
 
 run world3
-------------------------------------------------------------------
+
 pred world4{
     #SuggestedIntervention=2
     #Violation=2
