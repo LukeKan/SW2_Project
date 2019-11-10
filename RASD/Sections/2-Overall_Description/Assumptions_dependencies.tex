@@ -1,5 +1,5 @@
 As far as the specification document is concerned, it is necessary to specify some details and to state clearly a few ambiguous points. In order to better clarify those situations, the following assumptions are introduced.
-\subsection{Text Assumptions}
+\newpage\subsection{Text Assumptions}
 \begin{itemize}
     \item \textbf{Violation report}
         \begin{itemize}
@@ -10,12 +10,12 @@ As far as the specification document is concerned, it is necessary to specify so
             \item A license plate textual transcription is considered correct if it fits into one of the common standards of the EU states. In case of wrong textual transcription of the license plate from the image recognition service:
             \begin{itemize}
                 \item The textual transcription provided by the user is taken into account. After a previous check, the provided license plate will be considered as correct;
-                \item If the user has not sent a textual transcription, the violation is not associated to any license plate number;
+                \item If the user has not sent a textual transcription, the violation is not associated to any license plate number and it is discarded;
             \end{itemize} 
         \end{itemize}
     \item \textbf{Mining information} 
         \begin{itemize}
-            \item End users are allowed to mine information about the violation reports that they sent. Also, they can have access only to the (map visualization or list) MDS;
+            \item End users are allowed to mine information about the violation reports that they sent. Also, they can have access only to the MDS(map visualization or list);
             \item Authorities can mine information concerning all the stored reports in the SafeStreet system, such as MDS or the list of cars with an high number of violation reports;
         \end{itemize}
     \item \textbf{Suggested intervention}

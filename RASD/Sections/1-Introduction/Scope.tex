@@ -1,8 +1,8 @@
 \subsection{Description of the given problem}
-SafeStreets is a service that aims to improve the safety of the streets via the help of the users. They can notify violations or any illegal behaviour related to street parking to authorities. In particular users can iteract with the service via an application that can be used to send the violation reports; the latters mainly consist in a picture, taken by the user, of the vehicle responsible for the violation. Moreover users can send, along with the picture, location, date and additional information related to the infringement. The system also provides a Web interface that can be used by authorities in order to check the violations recieved. It is important to note that the picture sent by the user must contain the car plate in order to let police officers know which is the real vehicle that committed the violation. The application also offers the possibility to see areas/streets with the highest violations rates thanks to the data collected over time. As an advanced functionality the application can interact with services offered by the municipality; in particular if a service offers data related to car accidents, SafeStreets can cross this information with its owns, in order to get a better idea of the potentially unsafe areas and therefore suggest some possible interventions. Finally the application will have to be scalable and easy to use in order to provide a fast and efficient utilization for users that see a violation and want to report it immediately.
+SafeStreets is a service that aims to improve the safety of the streets via the help of the users. They can notify violations or any illegal behaviour related to street parking to authorities. In particular, users can interact with the service via an application that can be used to send the violation reports; the latters mainly consist in a picture of the vehicle responsible for the violation. Moreover users can send, along with the picture, location, date and additional information related to the infringement. The system also provides a Web interface that can be used by authorities in order to check the violations recieved. It is important to note that the picture sent by the user must contain the car plate in order to let police officers know which is the real vehicle that committed the violation. The application also offers the possibility to see areas/streets with the highest violations rates thanks to the data collected over time. As an advanced functionality the application can interact with services offered by the municipality; in particular if a service offers data related to car accidents, SafeStreets can cross this information with its owns, in order to get a better idea of the potentially unsafe areas and therefore suggest some possible interventions. Finally the application will have to be scalable and easy to use in order to provide a fast and efficient utilization for users that detect a violation and want to report it immediately.
 
 \subsection{Current system}
-SafeStreets is a new service that it is entering the market. There aren't any legacy systems that need to be integrated into the application, with the exception of the third party services that offers some functionality required by the application (like Maps and plate recognition). Those services will be better explained in the following paragraphs.
+SafeStreets is a new service that it is entering the market. There are not legacy systems that need to be integrated to the application, with the exception of the third party services that offers some functionality required by the application (like Maps and plate recognition). Those services will be better explained in the following paragraphs.
 
 
 \subsection{Shared Phenomena}
@@ -17,7 +17,7 @@ SafeStreets is a new service that it is entering the market. There aren't any le
       \hline
       The user sends a violation report & Y & W\\
       \hline
-      The system performs the plate recognition from the report image & Y & W\\
+      The system performs the plate recognition from the report image & Y & M\\
       \hline
       The system stores the report and marks it as a pending violation& N & M\\
       \hline
@@ -33,9 +33,9 @@ SafeStreets is a new service that it is entering the market. There aren't any le
       
       The user wants to see the most dangerous streets in a certain location& N & W\\
       \hline
-      The system filters the current user location in order to find violations& N & M\\
+      The system filters the specified location in order to find violations& N & M\\
       \hline
-      The system determines the most dangerous violations& N & M\\
+      The system determines the most dangerous streets close to the specified location& N & M\\
       \hline
       The system shows the list of the most dangerous streets in the specified location& Y & M\\
       \hline
@@ -66,7 +66,7 @@ SafeStreets is a new service that it is entering the market. There aren't any le
       \hline
       The authority submits the violation and the list of PT to the system & Y & W\\
       \hline
-      The system checks wether the PT belongs to the asking authority& N & M\\
+      The system checks wether the PT belongs to the asking authority and if the number of allocated technician is lower than six& N & M\\
       \hline
       The system rejects the schedule request & Y & M\\
       \hline
@@ -75,7 +75,7 @@ SafeStreets is a new service that it is entering the market. There aren't any le
 
       The authority wants to mine information about a set of violations & N & W\\
       \hline
-      The authority specify the list of filters and queries the system & Y & W\\
+      The authority specifies the list of filters and queries the system & Y & W\\
       \hline
       The system retrieves the list of violations that fit into the specified filters & N & M\\
       \hline
