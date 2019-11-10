@@ -5,8 +5,35 @@
   %TODO: check id SafeStreets is well written in all files (i.e. missing final s)
   % TODO: Fill title page
   \begin{titlepage}
+    \begin{figure}[t]
+        \centering\includegraphics[width=0.5\textwidth]{Images/logo_polimi}
+    \end{figure}
+    \begin{center}
+        \textsc{ \LARGE{Politecnico di Milano \\}}
+      \textsc{ \LARGE{Dipartimento di Energia, Informazione e Bioingegneria\\ }}
+      \textnormal{ \LARGE{Computer science and engineering \\ Software engineering 2\\}}
+      \vspace{30mm}
+      \fontsize{10mm}{7mm}\selectfont 
+        \textup{SafeStreets - RASD}\\
+    \end{center}
+    
+    \vspace{25mm}
+    
+    \begin{minipage}[t]{0.47\textwidth}
+      \textnormal{\large{\bf Professor:\\}}
+      {\large Prof. Elisabetta Di Nitto}
+    \end{minipage}\hfill\begin{minipage}[t]{0.47\textwidth}\raggedleft
+      \textnormal{\large{\bf Candidates:\\}}
+      {\large Nicolò Albergoni - 939589\\}
+      {\large Luca Loria - 944679}
+    \end{minipage}
+    
+    \vspace{20mm}
+    
+    \centering{\large{Academic Year 2019/2020 \\ Milano - 10/11/2019 }}
     
   \end{titlepage}
+  
   
   \tableofcontents
    
@@ -17,10 +44,10 @@
   \input{Sections/1-Introduction/Scope.tex}
   \section{Definitions, acronyms and abbreviations}
   \input{Sections/1-Introduction/Definitions_acronyms_abbreviations.tex}
-  \section{References}
-  \input{Sections/1-Introduction/References.tex}
   \section{Revision History}
   \input{Sections/1-Introduction/Revision_history.tex}
+  \section{References}
+  \input{Sections/1-Introduction/References.tex}
   \section{Document Structure}
   \input{Sections/1-Introduction/Document_structure.tex}
   
@@ -45,6 +72,25 @@
   \input{Sections/3-Specific_Requirements/Design_constraints.tex}
   \section{Software system attributes}
   \input{Sections/3-Specific_Requirements/Software_system_attributes.tex}
+
+  \chapter{Formal analysis using Alloy}
+  \section{Overview}
+  \input{Sections/4-Formal_Analysis_Using_Alloy/Overview.tex}
+  \section{Alloy code}
+  \input{Sections/4-Formal_Analysis_Using_Alloy/Facts_and_Signatures.tex}
+  \section{Worlds}
+  \input{Sections/4-Formal_Analysis_Using_Alloy/Worlds.tex}
+  \section{Alloy model performance}
+  \input{Sections/4-Formal_Analysis_Using_Alloy/Performance.tex}
+
+  \chapter{Effort Spent}
+  \input{Sections/5-Effort_spent/Luca_loria.tex}
+  \input{Sections/5-Effort_spent/Nicolo_albergoni.tex}
+
+  \chapter{References}
+  \input{Sections/6-References/References.tex}
   \end{document}
   
 
+  \loadspellchecklist[en][wordlist.txt]
+  \setupspellchecking[state=start]

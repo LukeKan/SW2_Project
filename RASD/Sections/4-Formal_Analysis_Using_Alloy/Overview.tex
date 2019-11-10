@@ -1,0 +1,10 @@
+In this	section an analysis of some critical aspects of the system is provided exploiting Alloy.	
+The	focus is on	some static	constraints, in	particular:	
+\begin{itemize}
+    \item Uniqueness of usernames and every other univoque parameter of the system, such as plates, violationIds and so on;
+    \item Users can only mine information concerning MDS and not Plates. Also they cannot explicitly query reports that has been performed by other users;
+    \item LSAs can deal only with violation occurred in their competence area and thus scheduling such violations to the technician that they manage;
+    \item SuggestedIntervention can be generated only if at least one violation occurred in the same location of the suggestion.
+\end{itemize}
+Other constraints are specified for keeping a steady structure of the alloy model, in order to avoid dangling entities and preserving foreign constraints.\newline
+Four different worlds have been generated in order to verify the correctness of the constraints.
