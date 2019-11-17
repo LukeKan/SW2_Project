@@ -1,0 +1,89 @@
+\input{config.tex}
+
+\begin{document}
+  %TODO: run a spellcheck
+  %TODO: check id SafeStreets is well written in all files (i.e. missing final s)
+  % TODO: Fill title page
+  \begin{titlepage}
+    \begin{figure}[t]
+        \centering\includegraphics[width=0.5\textwidth]{Images/logo_polimi}
+    \end{figure}
+    \begin{center}
+        \textsc{ \LARGE{Politecnico di Milano \\}}
+      \textsc{ \LARGE{Dipartimento di Energia, Informazione e Bioingegneria\\ }}
+      \textnormal{ \LARGE{Computer science and engineering \\ Software engineering 2\\}}
+      \vspace{30mm}
+      \fontsize{10mm}{7mm}\selectfont 
+        \textup{SafeStreets - DD}\\
+    \end{center}
+    
+    \vspace{25mm}
+    
+    \begin{minipage}[t]{0.47\textwidth}
+      \textnormal{\large{\bf Professor:\\}}
+      {\large Prof. Elisabetta Di Nitto}
+    \end{minipage}\hfill\begin{minipage}[t]{0.47\textwidth}\raggedleft
+      \textnormal{\large{\bf Candidates:\\}}
+      {\large Nicolò Albergoni - 939589\\}
+      {\large Luca Loria - 944679}
+    \end{minipage}
+    
+    \vspace{20mm}
+    
+    \centering{\large{Academic Year 2019/2020 \\ Milano - 09/12/2019 }}
+    
+  \end{titlepage}
+  
+  
+  \tableofcontents
+   
+  \chapter{Introduction}
+  \section{Purpose}
+  \input{Sections/1-Introduction/Purpose.tex}
+  \section{Scope}
+  \input{Sections/1-Introduction/Scope.tex}
+  \section{Definitions, acronyms and abbreviations}
+  \input{Sections/1-Introduction/Definitions_acronyms_abbreviations.tex}
+  \section{Revision History}
+  \input{Sections/1-Introduction/Revision_history.tex}
+  \section{Reference Documents}
+  \input{Sections/1-Introduction/References.tex}
+  \section{Document Structure}
+  \input{Sections/1-Introduction/Document_structure.tex}
+  
+  \chapter{Architectural Design}
+  \section{Overview: High-level components and their interaction}
+  \input{Sections/2-Architectural_Design/Overview.tex}
+  \section{Component view}
+  \input{Sections/2-Architectural_Design/Component_view.tex}
+  \section{Deployment view}
+  \input{Sections/2-Architectural_Design/Deployment_view.tex}
+  \section{Runtime view}
+  \input{Sections/2-Architectural_Design/Runtime_view.tex}
+  \section{Component interfaces}
+  \input{Sections/2-Architectural_Design/Component_interfaces.tex}
+  \section{Selected architectural styles and patterns}
+  \input{Sections/2-Architectural_Design/Selected_architectural_styles_and_patterns.tex}
+  \section{Other design decisions}
+  \input{Sections/2-Architectural_Design/Other_design_decisions.tex}
+  
+  \chapter{User interface design}
+  \input{Sections/3-User_interface_design/User_interface_design.tex}
+  
+  \chapter{Requirements traceability}
+  \input{Sections/4-Requirements_traceability/Requirements_traceability.tex}
+  
+  \chapter{Implementation, integration and test plan}
+  \input{Sections/5-Implementation_integration_and_test/Implementation_integration_and_test.tex}
+  
+  \chapter{Effort Spent}
+  \input{Sections/6-Effort_spent/Luca_loria.tex}
+  \input{Sections/6-Effort_spent/Nicolo_albergoni.tex}
+
+  \chapter{References}
+  \input{Sections/7-References/References.tex}
+  \end{document}
+  
+
+  \loadspellchecklist[en][wordlist.txt]
+  \setupspellchecking[state=start]
