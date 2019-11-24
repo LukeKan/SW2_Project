@@ -1,4 +1,4 @@
-Safestreets is a distributed multilayer software application. The software architecture is a thin three-tiers architecture, based on the MVC design pattern:
+SafeStreets is a distributed multilayer software application. The software architecture is a thin three-tiers architecture, based on the MVC design pattern:
 \begin{itemize}
     \item \textit{Presentation layer (View)}: the presentation layer is conceived as an high level representation of the application, which will be responsible for the user and third party interaction and data visualization. Also, the presentation layer is the only gateway from which actors can interact with the system;
     \item \textit{Application layer (Controller)}: the application layer is responsible for the core functionalities of the system: inside the controller, the main functions and the business logic is embedded and performed whenever an actor requires their execution;
@@ -24,9 +24,9 @@ Analyzing the figure \ref{fig:overview_diagram} in details, it is possible to se
     \caption{Network architecture}
     \label{fig:network_diagram}
 \end{figure}
-The physical of the Safestreets system is described in the figure \ref{fig:network_diagram}. 
+The network architecture of the Safestreets system is described in the figure \ref{fig:network_diagram}. 
 \begin{itemize}
-    \item The presentation layer is phisically separated from the rest of the system by the LAN routers od users and authorities.
+    \item The presentation layer is phisically separated from the rest of the system by the LAN routers of users and authorities;
     \item The application layer is splitted in two main areas: 
         \begin{itemize}
             \item A DMZ (DeMilitarized Zone), in which a proxy server filters the requests coming from the internet and forwards them to the web server load balancer and to the private backend network;
@@ -38,7 +38,7 @@ Also, the municipality server and the image recognition service have been pictur
 This architecture allows the system to meet the non-functional requirements of flexibility and robustness already explained in the RASD document: 
 the backend application is distributed on several nodes distributed on the same cluster, in order to guarantee a corrected and continuous functioning. In case a node crashes, another one is able to take its place automatically and keep the system running. For this purpose, it is necessary to highlight the fact that all nodes are consistent copies of each others: data and logic functions are kept consistent through automatic techniques of node replication that preserves the ACID rules.  
 \newline As it is possible to evince in the figure \ref{fig:network_diagram}, the web servers, backend and data nodes are replicated independently and separately.
-The division is necessary in order to isolate and preserve the system core functions: this practice is made for:
+The division is necessary in order to isolate and preserve the system core functions. This practice is made for:
 \begin{itemize}
     \item \textit{Safety purposes}: having phisically separated nodes prevent the possibility to reach certain hidden layer (for example the data layer) of the system, which needs to be absolutely safe as they contain sensible data.
     \item \textit{Maintainance purposes}: when maintainance is performed over a certain part of the system, this separation allows to preserve that part of the system which does not require maintainance;
