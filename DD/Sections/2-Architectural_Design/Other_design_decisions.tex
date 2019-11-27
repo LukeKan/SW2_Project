@@ -1,0 +1,27 @@
+\subsection{Lightweight thin client}
+The client software is narrowly purposed and lightweight: only the host server or server farm needs to be secured,rather than securing software installed on every endpoint device (although thin clients may still require basic security and strong authentication to prevent unauthorized access). One of the combined benefits of using cloud architecture with thin client desktops is that critical IT assets are centralized for better utilization of resources. Unused memory, bussing lanes, and processor cores within an individual user session, for example, can be leveraged for other active user sessions.
+\newline
+The simplicity of thin client hardware and software results in a very low total cost of ownership, but some of these initial savings can be offset by the need for a more robust cloud infrastructure required on the server side. Therefore, the SafeStreets mobile application can be run on any device (even cheap ones) as the computational power required is extremely low.
+\newline
+Mobile devices and web browser are responsible only for showing the results of the computation of the backend system: this functiong allows to speed up the execution of the system functions that are performed on a powerful hardware on the server side.
+\subsection{NoSQL document storage database}
+The central concept of a document store is the notion of a "document". While each document-oriented database implementation differs on the details of this definition, in general, they all assume that documents encapsulate and encode data (or information) in some standard formats or encodings. Encodings in use include XML, YAML, and JSON as well as binary forms like BSON. Documents are addressed in the database via a unique key that represents that document. One of the other defining characteristics of a document-oriented database is that in addition to the key lookup performed by a key-value store, the database also offers an API or query language that retrieves documents based on their contents.
+\newline
+Compared to relational databases, for example, collections could be considered analogous to tables and documents analogous to records. But they are different: every record in a table has the same sequence of fields, while documents in a collection may have fields that are completely different. 
+\newline
+Motivations for this approach include: simplicity of design, simpler "horizontal" scaling to clusters of machines (which is a problem for relational databases), finer control over availability and limiting the object-relational impedance mismatch. The data structures used by NoSQL document store databases are different from those used by default in relational databases, making some operations faster in NoSQL. 
+Also, NoSQL document store databases are optimized for insert and select operations: SafeStreets system only performs this operations (no recurrent updates).
+\newline
+A concrete example of the powerfulness of the document store database can be found in the case we want to perform a query coordinate-based: A DBMS like MongoDB provides \textbf{GeoJSON} data, which use an embedded document with:
+\begin{itemize}
+    \item a field named type that specifies the GeoJSON object type;
+    \item a field named coordinates that specifies the object’s coordinates.
+\end{itemize}
+An example of GeoJSON data point is:\newline
+location: {
+      type: "Point",
+      coordinates: [-73.856077, 40.848447]
+}
+\newline
+MongoDB offers a set of Geospatial Query Operators that allows to perform quick and optimized operator as \textbf{near}: returns geospatial objects in proximity to a point. Requires a geospatial index. \newline
+This operations speed up a lot data retrieving and storaging.
