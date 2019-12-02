@@ -9,12 +9,12 @@ The functions represented in the interface diagram have the following properties
 \begin{itemize}
     \item The signature of this functions are built only for conceptual showing purposes and they might differ in the final implementation;
     \item The main part of this diagram's functions have been pictured for guaranteeing a correct correspondency with the sequence diagrams of the previous paragraph, therefore some functions are submitted to the overloading technique;
-    \item they are offered by the application backend component to one another or to other Safestreets system components (mobile application and web application).
+    \item they are offered by the application backend component to one another or to other SafeStreets system components (mobile application and web application).
 \end{itemize} 
 In order to better understand how the interfaces work and how they are correlated, the following list of clarifications (assumptions) have been considered:
 \begin{itemize}
     \item The frontend interfaces have been generically represented by the ReceivePushNotification and ReceiveWebNotification interfaces for dependency purposes. For the sake of simplicity, they have not been analyzed in depth as it is not relevant for the system global functioning;
-    \item The workflow of the operation of the Safestreets system is the following:
+    \item The workflow of the operation of the SafeStreets system is the following:
         \begin{itemize}
             \item In order to perform any of the functionalities offered by the application backend, the external applications interacts to the ManageMobileApp and ManageWebApp by a RESTful API service;
             \item The functions of these two interfaces forward the requests to the interface of the component related to the called API, propagating also all the parameters embedded to the request (if correctly formalized);
@@ -32,17 +32,17 @@ In order to better understand how the interfaces work and how they are correlate
     \item The LoginManager's functions are the only ones that return a value (String): this is due to the authentication token, which has to be backpropagated to the URIManager component in order to perform its functions.
 \end{itemize}
 \textbf{\textsuperscript{[1]}}: all of the functions of the interfaces that requires a response have the submitter's account as a parameter: this is both necessary for the specific computation of the offered functions and for mapping the response to the submitter.If in some cases the account is not explicitely specified, it is because it can be retrieved by other parameters (e.g. requestSaveReport: the submitter is the violation.user)\newline
-\textbf{\textsuperscript{[2]}}: the Safestreets system handles a table with <Account, Address> tuples, which allows the Notification Service components to forward the results of computation.
+\textbf{\textsuperscript{[2]}}: the SafeStreets system handles a table with <Account, Address> tuples, which allows the Notification Service components to forward the results of computation.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{UML_diagrams/class_diagram_safestreets}
     \caption{Class diagram}
     \label{fig:class_diagram}
 \end{figure}
-In figure \ref{fig:class_diagram}, the Safestreets class diagram is represented. This version of the class diagram is similar to the one present in the RASD document, a part from:
+In figure \ref{fig:class_diagram}, the SafeStreets class diagram is represented. This version of the class diagram is similar to the one present in the RASD document, a part from:
 \begin{itemize}
     \item The Mining request generalization, in order to add a new useful and extendible design pattern;
-    \item The ScheduleElement class, which represents the n-n relation between Technicians and Violations: instead of representing this multiple relation in a singleton class which associate Technicians and Violations, the ScheduleElement objects represent tuples that links a single violation to many Technicians (<5 as stated in the RASD document). In this way, the system allows LSAs to schedule many Technicians to a specific violation as pictured in the web application mockups. The opposite operation (Technician to many violation) is not allowed up to this version of the system;
+    \item The ScheduleElement class, which represents the n-n relation between Technicians and Violations: instead of representing this multiple relation in a singleton class which associate Technicians and Violations, the ScheduleElement objects represent tuples that links a single violation to many Technicians ($\le 5$ as stated in the RASD document). In this way, the system allows LSAs to schedule many Technicians to a specific violation as pictured in the web application mockups. The opposite operation (Technician to many violation) is not allowed up to this version of the system;
     \item The CarAccident class, which represent the aggregation of a single datum collected from the Municipality information system;
     \item The autorithy generalization of the classes LSA and Technician, in order to identify those classes of accounts which belongs to authorities, therefore they can perform a series of action which are forbidden to Users. 
 \end{itemize}
