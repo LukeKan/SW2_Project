@@ -38,16 +38,27 @@ In this chapter we exhibit the mapping between the requirements stated in the RA
     \item {[R13]}: The Web application must be able to interact with the backend system to send/retrieve information;
     \begin{itemize}
       \item \textbf{AuthorityWebServer}: through the requests forwarded by the AuthorityWebServer to the URIManager the web application is effectively interacting with the backend system.
-    \end{itemize} 
-    
+    \end{itemize}     
     \item {[R14]}: The Web application must provide a special interface for the LSA in order to perform special task reserved for his role;
-    \item {[R15]}: The Web application must allow the LSA to securely create account reserved for PT;
-    \item {[R16]}: The Web application must allow the LSA to associate the PT's badge number with his related account;
-    \item {[R17]}: The system automatically generates a temporary password associated to the new account. Upon the first login, the application asks the PT to change the password;
-    \item {[R18]}: The system correctly registers the new accounts and allows access to the Web application to the PT registered;  
+    \begin{itemize}
+      \item \textbf{AuthorityWebApp}: this component represents the web app itself.
+    \end{itemize}  
+    \item {[R15]}: The Web application must allow the LSA to securely create account reserved for PT;  
+    \item[] {[R16]}: The Web application must allow the LSA to associate the PT's badge number with his related account;
+    \item[] {[R17]}: The system automatically generates a temporary password associated to the new account. Upon the first login, the application asks the PT to change the password;
+    \item[] {[R18]}: The system correctly registers the new accounts and allows access to the Web application to the PT registered;
+    \begin{itemize}
+      \item \textbf{TechnicianRegistrationManager}: this component is entirely dedicated to handle all the necessary procedures related to the creation of a new PT account. Clearly in order to save the newly created account this component will have to interact with the QueryManager.
+    \end{itemize} 
     \item {[R19]}: The Web application allows the visualization of reports to both the LSA and the PTs via a dedicated section;
+    \begin{itemize}
+      \item \textbf{FilteringManager}: as soon as the authority opens the web application a request is sent to this component that will gather the necessary query parameter and then perform another request to the QueryManager to retrieve such data.
+    \end{itemize}    
     \item {[R20]}: The Web application allows the LSA to schedule reports to PT by associating their account to the report;
-    \item {[R21]}: The Web application allows PTs to visualize their scheduled reports;
+    \item[] {[R21]}: The Web application allows PTs to visualize their scheduled reports;
+    \begin{itemize}
+      \item \textbf{SchedulingManager}: this component handles the process of associating PTs to reports done by the LSA to create the schedule. It also handles the request of consulting the personal PT schedule by performing a query for such schedule on the QueryManager.
+    \end{itemize}
     \item {[R22]}: The Web application allows both the LSA and the PTs to change the status of reports (i.e. from "PENDING" to "SOLVED");
     \item {[R23]}: The Web application provides a section that can be used by both LSA and PTs to mine the data.
     \item {[R24]}: The system must be able to collect the filter criteria inserted by the authorities and then compose a query that will be executed to retrieve the matching data;
