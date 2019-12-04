@@ -60,10 +60,17 @@ In this chapter we exhibit the mapping between the requirements stated in the RA
       \item \textbf{SchedulingManager}: this component handles the process of associating PTs to reports done by the LSA to create the schedule. It also handles the request of consulting the personal PT schedule by performing a query for such schedule on the QueryManager.
     \end{itemize}
     \item {[R22]}: The Web application allows both the LSA and the PTs to change the status of reports (i.e. from "PENDING" to "SOLVED");
+    \begin{itemize}
+      \item \textbf{ViolationStatusManager}: this component has been designed to address this purpose.
+    \end{itemize}
     \item {[R23]}: The Web application provides a section that can be used by both LSA and PTs to mine the data.
-    \item {[R24]}: The system must be able to collect the filter criteria inserted by the authorities and then compose a query that will be executed to retrieve the matching data;
-    \item {[R25]}: The Web application provides a section that can be used by both LSA and PTs to visualize statistics/metrics about the data;
-    \item {[R26]}: The system must offer some functionalities to calculate the most useful statistics/metrics related to the data;
+    \item[] {[R24]}: The system must be able to collect the filter criteria inserted by the authorities and then compose a query that will be executed to retrieve the matching data;
+    \item[] {[R25]}: The Web application provides a section that can be used by both LSA and PTs to visualize statistics/metrics about the data;
+    \item[] {[R26]}: The system must offer some functionalities to calculate the most useful statistics/metrics related to the data;
+    \begin{itemize}
+      \item \textbf{AuthorityWebApp}: some sections of this web application are developed in order to create an interface that allows authority to mine data and get useful metrics;
+      \item \textbf{FilteringManager}:this component, based on the filters inserted by the user, gather a list of query parameters that will we passed over to QueryManager in order to retrieve the desired data. It also provides the functionalities needed to calculate the most useful metrics and statistics.
+    \end{itemize}    
     \item {[R27]}: The Web application provides a section from which the authorities can ask for suggestions;
     \item {[R28]}: The backend system must be able to communicate and retrieve data from the municipality service at any given time;
     \item {[R29]}: The system has to merge and find correlations between the violations and the car accidents;
