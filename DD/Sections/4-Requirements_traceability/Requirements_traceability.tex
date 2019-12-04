@@ -1,0 +1,79 @@
+In this chapter we exhibit the mapping between the requirements stated in the RASD document and the design elements that have been chosen to introduce in order to address them. The stated components can sometimes address the requirements independently but some other times they rely on the actions of other components, such behaviour it is however illustrated in the description if needed. 
+
+\begin{itemize} 
+    \item {[R1]}: The mobile application must be able to gather all the required data such as: location, date and time from the user's device;
+    \item[] {[R2]}: The mobile application has to allow the user to choose between different categories of violations;
+    \item[] {[R3]}: The mobile application has to allow the user to optionally add information about the event and the car plate number;
+    \item[] {[R4]}: The mobile application has to allow the user to retake the picture if desired;
+    \begin{itemize}
+      \item \textbf{UserMobileApp}: this component, that represents the mobile application, is responsible to handle all this kind of user experience requirements.
+    \end{itemize}
+    \item {[R5]}: The mobile application must be able to interact with the backend system to send/retrieve information.
+    \begin{itemize}
+      \item \textbf{UserMobileApp}: this component, in order to connect to the backend, handles the connection with the URIManager directly.
+    \end{itemize}      
+    \item {[R6]}: The backend system must be able to send the violation image to the plate recognition service in order to retrieve the car plate number from the image;
+    \begin{itemize}
+      \item \textbf{NewReportHandler}: this component, after some checks on the correctness of the violation report, sends the image to the PlateRecognitionService.
+    \end{itemize}  
+    \item {[R7]}: Once the car plate number has been retrieved the system must save the report information in the database;
+    \begin{itemize}
+      \item \textbf{QueryManager}: under the request submitted by the NewReportHandler, the QueryManager will save the plate number, along with the other information, in the database. 
+    \end{itemize} 
+    \item {[R8]}: The backend system must retrieve the latest reports submitted by the user from the database. Once the data is gathered, the backend system must send it to the mobile application that will display them; 
+    \item {[R9]}: The user must be able to consult the status associated with each report;
+    % TODO: Check for this requirements
+    \item {[R10]}: The application has to allow the user to insert an address near which to search the MDS. If no address is provided the application will instead search the MDS near the current position of the user (collected from the GPS);
+    \begin{itemize}
+      \item \textbf{UserMobileApp}: this behaviour is handled by the mobile application, if an address is provided it will be used, instead of the GPS coordinates, to formulate the MDS request.  
+    \end{itemize} 
+    \item {[R11]}: The backend system must calculate the MDS close to the given location;
+    \begin{itemize}
+      \item \textbf{AggregationManager}: this component calculates the MDS immediately after the QueryManager provides to it the necessary data; 
+    \end{itemize} 
+    \item {[R12]}: The mobile application must enlighten on the map the MDS;
+    \begin{itemize}
+      \item \textbf{UserMobileApp}: the UserMobileApp component asks to the map service to display the map along with the MDS highlighted.
+    \end{itemize} 
+    \item {[R13]}: The Web application must be able to interact with the backend system to send/retrieve information;
+    \begin{itemize}
+      \item \textbf{AuthorityWebServer}: through the requests forwarded by the AuthorityWebServer to the URIManager the web application is effectively interacting with the backend system.
+    \end{itemize}     
+    \item {[R14]}: The Web application must provide a special interface for the LSA in order to perform special task reserved for his role;
+    \begin{itemize}
+      \item \textbf{AuthorityWebApp}: this component represents the web app itself.
+    \end{itemize}  
+    \item {[R15]}: The Web application must allow the LSA to securely create account reserved for PT;  
+    \item[] {[R16]}: The Web application must allow the LSA to associate the PT's badge number with his related account;
+    \item[] {[R17]}: The system automatically generates a temporary password associated to the new account. Upon the first login, the application asks the PT to change the password;
+    \item[] {[R18]}: The system correctly registers the new accounts and allows access to the Web application to the PT registered;
+    \begin{itemize}
+      \item \textbf{TechnicianRegistrationManager}: this component is entirely dedicated to handle all the necessary procedures related to the creation of a new PT account. Clearly in order to save the newly created account this component will have to interact with the QueryManager.
+    \end{itemize} 
+    \item {[R19]}: The Web application allows the visualization of reports to both the LSA and the PTs via a dedicated section;
+    \begin{itemize}
+      \item \textbf{FilteringManager}: as soon as the authority opens the web application a request is sent to this component that will gather the necessary query parameter and then perform another request to the QueryManager to retrieve such data.
+    \end{itemize}    
+    \item {[R20]}: The Web application allows the LSA to schedule reports to PT by associating their account to the report;
+    \item[] {[R21]}: The Web application allows PTs to visualize their scheduled reports;
+    \begin{itemize}
+      \item \textbf{SchedulingManager}: this component handles the process of associating PTs to reports done by the LSA to create the schedule. It also handles the request of consulting the personal PT schedule by performing a query for such schedule on the QueryManager.
+    \end{itemize}
+    \item {[R22]}: The Web application allows both the LSA and the PTs to change the status of reports (i.e. from "PENDING" to "SOLVED");
+    \begin{itemize}
+      \item \textbf{ViolationStatusManager}: this component has been designed to address this purpose.
+    \end{itemize}
+    \item {[R23]}: The Web application provides a section that can be used by both LSA and PTs to mine the data.
+    \item[] {[R24]}: The system must be able to collect the filter criteria inserted by the authorities and then compose a query that will be executed to retrieve the matching data;
+    \item[] {[R25]}: The Web application provides a section that can be used by both LSA and PTs to visualize statistics/metrics about the data;
+    \item[] {[R26]}: The system must offer some functionalities to calculate the most useful statistics/metrics related to the data;
+    \begin{itemize}
+      \item \textbf{AuthorityWebApp}: some sections of this web application are developed in order to create an interface that allows authority to mine data and get useful metrics;
+      \item \textbf{FilteringManager}:this component, based on the filters inserted by the user, gather a list of query parameters that will we passed over to QueryManager in order to retrieve the desired data. It also provides the functionalities needed to calculate the most useful metrics and statistics.
+    \end{itemize}    
+    \item {[R27]}: The Web application provides a section from which the authorities can ask for suggestions;
+    \item {[R28]}: The backend system must be able to communicate and retrieve data from the municipality service at any given time;
+    \item {[R29]}: The system has to merge and find correlations between the violations and the car accidents;
+    \item {[R30]}: The system has to identify potentially unsafe areas and then estimate possible interventions based on the correlations that have been found;
+    \item {[R31]}: Once the computation is over the Web application must display the suggested interventions on the interface along with the location;
+\end{itemize}
