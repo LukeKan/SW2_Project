@@ -1,0 +1,56 @@
+The SafeStreets system is divided into three main application:
+\begin{itemize}
+    \item The Mobile application;
+    \item The Web application;
+    \item The backend application.
+\end{itemize}
+Every application enlisted above will be developed, tested and integrated following a bottom-up strategy. Firstly, the backend application will be developed as it creates a dependency to the mobile and the web application: without a functioning backend, it would be necessary to create a series of drivers in order to test the functionalities of the frontend applications. Once the backend application will be implemented and tested with respect to the majority of its components (the most relevant ones), it will be possible to continue with the development and testing of the mobile and web application. In the end, the whole system will be integrated and tested.
+For the sake of simplicity, this document will cope with the the implementation, testing and integration of the backend application.
+\subsection{Backend application implementation}
+As previously explained in the component diagram, the backend application is divided into several subsystems, which wrap up all the components that perform similar tasks. Moreover, every subsystem is composed by a set of components which represent the atomic elements of the system.
+The implementation process will start from those components that create a lot of dependencies to other components (for example the QueryManager) and will continue with the remaining ones. After having unit-tested every function implemented, each component will be integrated and tested as a whole. 
+The main rationale behind the style of the development and testing that have been selected is functionality-wise rather than component-wise: instead of building a whole component as once, only the functions which are needed to perform a specific functionality are assembled. Moreover, an incremental integration and testing of such components will be performed until the functionality will be considered ready to be deployed.
+
+In order to proceed with the implementation of the SafeStreets system functionalities, the following table has been created expressing for each functionality the difficulty of implementation and testing and the level of importance to customers.
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{ |l|c|c| }
+        \hline
+        Functionality & Level of importance & Difficulty \\
+        \hline
+        Register and LogIn & low & low \\								
+        \hline
+        View history of reports & medium & low \\
+        \hline
+        Create a new report & high	& medium \\
+        \hline								
+        Schedule police technicians & medium & medium \\									
+        \hline
+        Watch own schedule & medium & low \\									
+        \hline
+        Register a new technician & medium & medium \\
+        Perform information mining & high & high \\									
+        \hline
+        Change report status & high & low \\									
+        \hline
+        Generate suggested intervention & medium & high \\									
+        \hline
+    \end{tabularx}
+  \end{table}
+The levels of importance and difficulty have been determined in an arbitrary way, based on the experience.
+In order to explain more in detailes the order of implementation and which components have to be implemented, here it is a list of precedence that will have to be followed while implementing and testing:
+\begin{itemize}
+    \item \textbf{Perform information mining}: firstly it is necessary to develop the QueryManager, which performs the interactions with the ViolationDB and the AggregationManager as next. After this, it will be possible to proceed with the FilteringManager as it requires the interaction with the QueryManager. As soon as the previous components have been integrated, it will be possible to develop and test the
+     SendNotificationWebManager and the SendNotificationMobileManager. The implementation of the latters can be performed asynchronously as they do not create any dependencies one another; 
+    \item \textbf{Create a new report}: the first component to be developed is the NewReportHandler: it depends on the QueryManager which will need to be integrated with the functionalities required and the external service of image recognition for the license plates. As this latter component is external, it will be treated as well functioning and tested. The same process of integration of functions to actuate the "Create new Report" functionality will continue with the rest of the flow described at the previous point: QueryManager, AggregationManager,SendNotificationWebManager and (in parallel) SendNotificationMobileManager;
+    \item \textbf{Change report status}: this functionality requires the development and testing of the ViolationStatusManager. All the (same) chain of dependencies will be updated and integrated with the functions needed for performing the "Change report status";
+    \item \textbf{Generate suggested intervention}: this functionality requires the development of the whole SuggestedIntervention Service subsystem: firstly, the development process should start from the MunicipalityDataHandler, which is in charge to interact with the Municipality information system (black box). Once this component has been developed, it will be time to proceed with the SuggetionGenerationManager that will interact with the MunicipalityDataHandler and the QueryManager to perform its computation. For this reason, the the QueryManager will be updated as necessary. At this moment, the SuggestionNotifier will be implemented and the SendNotificationMobileManager and SendNotificationWebManager will be updated aswell. The whole SuggestedIntervention Service subsystem should be fully implemented, tested and integrated at this point;
+    \item \textbf{Schedule police technicians}: in order to perform this functionality, the SchedulingManager component should be developed as first, together with the update of the whole flow from the QueryManager to the SendNotificationWebManager and SendNotificationMobileManager. Now the QueryManager should be able to interact with the PersonnelDB;
+    \item \textbf{Register a new technician}: this operation requires the development of the TechnicianRegistrationManager and the update of the whole flow from the QueryManager to the SendNotificationMobileManager and SendNotificationWebManager. Now the QueryManager should be able to interact with the AuthenticationDB, in order to store credentials of new technicians;
+    \item \textbf{View history of reports}: this functionality requires the update of the FilteringManager and the QueryManager.  At this moment of the development, the Violation Service subsystem should be completely implemented, tested and integrated;
+    \item \textbf{Watch own schedule}: this functionality requires the update of the SchedulingManager and the QueryManager. At this point of the development, the whole Personnel Service subsystem should be implemented, tested and integrated;
+    \item \textbf{Register and LogIn}: this functionality requires the development, testing and integration of the whole Authentication service: the LogInManager and the RegistrationManager can be developed in the meantime, as they do not depend one another. The QueryManager will be updated. At this point, the Authentication Service subsystem should be completely implemented, tested and integrated. Also, it is possible to consider the Notification Service and Data Query Service subsystems as complete.
+\end{itemize}
+Lastly, the URIManager component is developed, tested and integrated with the rest of the system for enabling the RESTful API communication with the frontend and the mapping of such request.
+The order of the list takes into account at first the level of importance to customers and then the level of difficulty for implementing and testing the specific functionality.
+
