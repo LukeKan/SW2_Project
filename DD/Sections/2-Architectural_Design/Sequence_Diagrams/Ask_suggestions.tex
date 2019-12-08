@@ -4,7 +4,7 @@
   \caption{Ask for suggestions sequence diagram}
   \label{fig:ask_suggestions_sd}
 \end{figure}
-This last sequence diagram describes the advanced functionality of creating suggestions by crossing violation reports with the car accidents data provided by the municipality. The LSA that wants to retrieve suggestion that can possibly be made in his competence area, submits a request via the web app. As always the request arrives to the URIManager via the AuthorityWebServer and then it is routed to the SuggestionGenerationManager that will have to perform this three actions in order:
+This last sequence diagram describes the advanced functionality of creating suggestions by crossing violation reports with the car accidents data provided by the municipality. The LSA that wants to retrieve such suggestion, that can possibly be made in his competence area, submits a request via the web app. As always the request arrives to the URIManager via the AuthorityWebServer and then it is routed to the SuggestionGenerationManager that will have to perform this three actions in order:
 \begin{enumerate}
   \item Send a request to the QueryManager to perform a query that provides with the most frequent categories of violations, and the related streets in the LSA competence area;
   \item Once query result is provided, forward a request to the MunicipalityDataHandler that will automatically collect the car accidents data by retrieving it from the MunicipalityDataSharing component;
