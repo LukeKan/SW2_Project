@@ -1,0 +1,40 @@
+\subsection{Lightweight thin client}
+The client software is narrowly purposed and lightweight: only the host server or server farm needs to be secured, rather than securing software installed on every endpoint device (although thin clients may still require basic security and strong authentication to prevent unauthorized access). One of the combined benefits of using cloud architecture with thin client desktops is that critical IT assets are centralized for better utilization of resources. Unused memory, bussing lanes and processor cores within an individual user session, for example, can be leveraged for other active user sessions.
+\newline
+The simplicity of thin client hardware and software results in a very low total cost of ownership, but some of these initial savings can be offset by the need for a more robust cloud infrastructure required on the server side. Therefore, the SafeStreets mobile application can be run on any device (even cheap ones) as the computational power required is extremely low.
+\newline
+Mobile devices and web browser are responsible only for showing the results of the computation of the backend system: this functiong allows to speed up the execution of the system functions that are performed on a powerful hardware on the server side.
+\subsection{Relational database}
+Relational databases are the most used technique of data storaging. A relational database has at least to guarantee the following aspects:
+\begin{itemize}
+    \item Present the data to the user as relations (a presentation in tabular form, i.e. as a collection of tables with each table consisting of a set of rows and columns);
+    \item Provide relational operators to manipulate the data in tabular form.
+\end{itemize}
+In order to build a formally correct relational database, it is necessary to create a \textbf{Relation model} of the data that the database is going to contain. The relational model organizes data into one or more tables (or "relations") of columns and rows, with a unique key identifying each row. Rows are also called records or tuples. Columns are also called attributes. Generally, each table/relation represents one "entity type" (such as user or violation). The rows represent instances of that type of entity  and the columns representing values attributed to that instance (such as username or date). 
+\newline Moreover, tables are connected through relations, which are a logical connection, established on the basis of interaction among these tables. 
+\newline In order to interact with a relational database, it is necessary to use a RDBMS, such as PostgreSQL or MySQL and so forth.
+\newline The main advantages of using a relational database are:
+\begin{itemize}
+    \item \textbf{Accuracy}: Data is stored just once, eliminating data deduplication;
+    \item \textbf{Flexibility}: Complex queries are easy for users to carry out;
+    \item \textbf{Collaboration}: Multiple users can access the same database;
+    \item \textbf{Trust}: Relational database models are mature and well-understood;
+    \item \textbf{Security}: Data in tables within a RDBMS can be limited to allow access by only particular users.
+\end{itemize}
+In the SafeStreets system, relational databases are very useful as: 
+\begin{itemize}
+    \item data is structured in a fixed way, therefore NoSQL databases are not very useful;
+    \item many users and authorities accounts have to perform frequent queries to the DB;
+    \item the hierarchical structure of the RDBMS allow SafeStreets to perform some of the privileges controls directly on the inside the RDBMS.
+\end{itemize}
+\subsection{Cloud database}
+A cloud database is a database that typically runs on a cloud computing platform, and access to the database is provided as-a-service.
+Database services take care of scalability and high availability of the database. Database services make the underlying software-stack transparent to the user.
+The design and development of typical systems utilize data management and relational databases as their key building blocks. Advanced queries expressed in SQL work well with the strict relationships that are imposed on information by relational databases. However, relational database technology was not initially designed or developed for use over distributed systems. This issue has been addressed with the addition of clustering enhancements to the relational databases, although some basic tasks require complex and expensive protocols, such as with data synchronization.
+\newline The main advantages of adopting a cloud DBMS are:
+\begin{itemize}
+    \item Scalability: scaling along any dimension generally requires adding or subtracting nodes from a cluster to change the storage capacity, I/O operations per second, or total compute available to bring to bear upon queries. That operation, of course, requires redistributing copies of the data and sending it between nodes. Although this was once one of the hardest problems in building scalable, distributed databases, the new breed of cloud-native databases can take care of these issues efficiently;
+    \item Reduced Administrative Burden: a cloud-hosted, mostly self-managed data\-base doesn’t eliminate a database administrator, but it can eliminate unnecessary features that typically consume much of a DBA’s time and efforts. That allows a DBA to focus his or her time on more important issues;
+    \item Improved Security: by running databases on in-house servers, it’s \\ SafeStreets responsibility to think about security. It is necessary to ensure that data\-bases have an updated kernel and other critical software, and it is necessary to keep up with the newest digital threats. By delegating all these operations to the cloud DBMS company, a lot of work is saved.
+\end{itemize}
+All of this advantages relieves an heavy burden from the budget of the project, as the expenses of a Cloud DBMS service is much lower than affording a local DBMS.

@@ -1,0 +1,42 @@
+\subsection{RESTful	API architecture}
+A RESTful API is based on representational state transfer (REST) technology, an architectural style and approach to communications often used in web services development. A RESTful API breaks down a transaction to create a series of small modules. Each module addresses a particular underlying part of the transaction. This modularity provides developers with a lot of flexibility. Every specific module of the REST API can be invoked remotely by an URI which uniquely identifies that service. Once an API has been casted, a certain function is executed on the RESTful API server: the result of this computation is then sent back to the invoking client by a callback function that it offers.
+As far as the SafeStreets system is concerned, both the web and the mobile application make use of RESTful APIs offered by the application backend system: 
+\begin{itemize}
+    \item the mobile application directly interacts with the APIs through their URIs;
+    \item the web application retrieves data and performs operations that require the application backend system through API invocation through a \textbf{Promise-Deferred} asynchronous calling system.
+\end{itemize}
+Also, the mobile application make use of the Google Maps API for the mapping service.\newline
+At the same time, the application backend system make use of the RESTful APIs offered by the Municipality information system and the Plate recognition service.
+Therefore, a certain information system can be both offering and using RESTful APIs for its purposes.
+\subsection{MVC design pattern}
+As deeply explained in the overview paragraph of this section, the MVC design pattern is the core of the functioning of the SafeStreets system.
+In order to provide a detailed explanation of how this popular design pattern works, here it is a detailed description from the  Wikipedia website:
+\begin{itemize}
+    \item \textbf{Model}:\textit{" The central component of the pattern. It is the application's dynamic data structure, independent of the user interface. It directly manages the data, logic and rules of the application."}
+    \item \textbf{View}: \textit{"Any representation of information such as a chart, diagram or table. Multiple views of the same information are possible, such as a bar chart for management and a tabular view for accountants."}
+    \item \textbf{Controller}:\textit{"Accepts input and converts it to commands for the model or view.
+    In addition to dividing the application into these components, the model–view–controller design defines the interactions between them.
+    The model is responsible for managing the data of the application. It receives user input from the controller.
+    The view means presentation of the model in a particular format.
+    The controller responds to the user input and performs interactions on the data model objects. The controller receives the input, optionally validates it and then passes the input to the model.
+    As with other software patterns, MVC expresses the "core of the solution" to a problem while allowing it to be adapted for each system."}
+\end{itemize}
+The main advantages that the MVC design pattern provides are:
+\begin{itemize}
+    \item Simultaneous development – Multiple developers can work simultaneously on the model, controller and views;
+    \item High cohesion – MVC enables logical grouping of related actions on a controller together. The views for a specific model are also grouped together;
+    \item Loose coupling – The very nature of the MVC framework is such that there is low coupling among models, views or controllers;
+    \item Ease of modification – Because of the separation of responsibilities, future development or modification is easier;
+    \item Multiple views for a model – Models can have multiple views.
+\end{itemize}
+In the SafeStreets system, the model is represented by the Cloud DBMS and the DataQueryService subsystem of the backend application and the MunicipalityDataHandler of the SuggestedInterventionService;
+the view is represented by the web and mobile application; the controller is represented by all the application backend subsystem except from the DataQueryService and the MunicipalityDataHandler of the SuggestedInterventionService.
+\subsection{Three-tier architecture}
+Three-tier architecture is a client-server software architecture pattern in which the user interface (presentation), functional process logic ("business rules"), computer data storage and data access are developed and maintained as independent modules, most often on separate platforms. The Wikipedia website states that in the three-tier architecture it is possible to evidence:
+\begin{itemize}
+    \item \textbf{Presentation tier}: 
+    \textit{"This is the topmost level of the application. The presentation tier displays information. It communicates with other tiers by which it puts out the results to the browser/client tier and all other tiers in the network. In simple terms, it is a layer which users can access directly (such as a web page, or a mobile application)."}
+    \item \textbf{Application tier}: \textit{"The logical tier is pulled out from the presentation tier and, as its own layer, it controls an application’s functionality by performing detailed processing."}
+    \item \textbf{Data tier}: \textit{"The data tier includes the data persistence mechanisms\\ (database servers, file shares, etc.) and the data access layer that encapsulates the persistence mechanisms and exposes the data. The data access layer should provide an API to the application tier that exposes methods of managing the stored data without exposing or creating dependencies on the data storage mechanisms. Avoiding dependencies on the storage mechanisms allows for updates or changes without the application tier clients being affected by or even aware of the change. As with the separation of any tier, there are costs for implementation and often costs to performance in exchange for improved scalability and maintainability."}
+\end{itemize}
+Although the three-tier architecture may seem very similar to the MVC design pattern, they present a crucial difference: in the three-tier architecture the client tier is forbidden to communicate with the data tier (as it is implemented in the SafeStreets system) while the communication in the MVC pattern is triangular. As far as the SafeStreets system is concerned, only the application tier is responsible for the interactions between different layers.

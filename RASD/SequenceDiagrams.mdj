@@ -4925,7 +4925,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFuRV+PEcR4vRo="
 					},
-					"name": "Role5"
+					"name": "Role5",
+					"type": ""
 				}
 			]
 		},
@@ -7005,7 +7006,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFuRe1zQn1WXf8="
 					},
-					"name": "Role5"
+					"name": "Role5",
+					"type": ""
 				}
 			]
 		},
@@ -8696,7 +8698,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFuR5P8Px5mj5U="
 							},
-							"name": "Assign report to PT",
+							"name": "Schedule report to PT",
 							"ownedViews": [
 								{
 									"_type": "UMLFrameView",
@@ -8715,11 +8717,11 @@
 												"$ref": "AAAAAAFuR5P8Px5oy7A="
 											},
 											"font": "Arial;13;0",
-											"left": 94.97900390625,
+											"left": 102.97900390625,
 											"top": 5,
-											"width": 112.26806640625,
+											"width": 127.4580078125,
 											"height": 13,
-											"text": "Assign report to PT"
+											"text": "Schedule report to PT"
 										},
 										{
 											"_type": "LabelView",
@@ -8728,7 +8730,7 @@
 												"$ref": "AAAAAAFuR5P8Px5oy7A="
 											},
 											"font": "Arial;13;1",
-											"left": 29,
+											"left": 37,
 											"top": 5,
 											"width": 60.97900390625,
 											"height": 13,
@@ -8736,7 +8738,7 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 24,
+									"left": 32,
 									"width": 953,
 									"height": 817,
 									"nameLabel": {
@@ -9687,8 +9689,8 @@
 												"$ref": "AAAAAAFuR6+7jiALQdw="
 											},
 											"font": "Arial;13;0",
-											"left": 131.578125,
-											"top": 253,
+											"left": 147.578125,
+											"top": 437,
 											"width": 85.54443359375,
 											"height": 13,
 											"text": "for each report"
@@ -9700,8 +9702,8 @@
 												"$ref": "AAAAAAFuR6+7jiALQdw="
 											},
 											"font": "Arial;13;1",
-											"left": 101,
-											"top": 253,
+											"left": 117,
+											"top": 437,
 											"width": 25.578125,
 											"height": 13,
 											"text": "loop"
@@ -9734,14 +9736,14 @@
 															},
 															"visible": false,
 															"font": "Arial;13;0",
-															"left": 116,
-															"top": 286,
+															"left": 132,
+															"top": 470,
 															"height": 13
 														}
 													],
 													"font": "Arial;13;0",
-													"left": 96,
-													"top": 271,
+													"left": 112,
+													"top": 455,
 													"width": 833,
 													"height": 43,
 													"guardLabel": {
@@ -9750,17 +9752,17 @@
 												}
 											],
 											"font": "Arial;13;0",
-											"left": 96,
-											"top": 271,
+											"left": 112,
+											"top": 455,
 											"width": 833,
 											"height": 43
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 96,
-									"top": 248,
+									"left": 112,
+									"top": 432,
 									"width": 833,
-									"height": 505,
+									"height": 337,
 									"nameLabel": {
 										"$ref": "AAAAAAFuR6+7jiAMkdM="
 									},
@@ -10125,17 +10127,17 @@
 												"$ref": "AAAAAAFuR7U9wCB6cKM="
 											},
 											"font": "Arial;13;0",
-											"left": 495,
-											"top": 319,
-											"width": 230.97216796875,
+											"left": 782,
+											"top": 328,
+											"width": 86.68359375,
 											"height": 13,
-											"alpha": -1.594744845150539,
-											"distance": 167.0478973228936,
+											"alpha": 1.4893432990384639,
+											"distance": 49.16299421312742,
 											"hostEdge": {
 												"$ref": "AAAAAAFuR7U9wCB7ROs="
 											},
 											"edgePosition": 1,
-											"text": "8 [PT_status == Available] : retrievePT()"
+											"text": "8 : retrievePT()"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -11587,8 +11589,7 @@
 							},
 							"target": {
 								"$ref": "AAAAAAFuR5Wavx64664="
-							},
-							"guard": "PT_status == Available"
+							}
 						},
 						{
 							"_type": "UMLMessage",
@@ -11924,11 +11925,11 @@
 												"$ref": "AAAAAAFuR+1y3OoXqbY="
 											},
 											"font": "Arial;13;0",
-											"left": 205.07177734375,
+											"left": 211.578125,
 											"top": 381,
-											"width": 71.80810546875,
+											"width": 152.0107421875,
 											"height": 13,
-											"text": "Close report"
+											"text": "PT wants to close a report"
 										},
 										{
 											"_type": "LabelView",
@@ -11939,9 +11940,9 @@
 											"font": "Arial;13;1",
 											"left": 181,
 											"top": 381,
-											"width": 19.07177734375,
+											"width": 25.578125,
 											"height": 13,
-											"text": "opt"
+											"text": "loop"
 										},
 										{
 											"_type": "UMLInteractionOperandCompartmentView",
@@ -14408,8 +14409,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFuR+CKZ+j4sqw="
 							},
-							"name": "Close report",
-							"interactionOperator": "opt",
+							"name": "PT wants to close a report",
+							"interactionOperator": "loop",
 							"operands": [
 								{
 									"_type": "UMLInteractionOperand",
@@ -14899,8 +14900,8 @@
 									"left": 16,
 									"top": 40,
 									"width": 185,
-									"height": 112,
-									"text": "- The LSA has already logged in\n- The is a correspondent account for the PT that we want to schedule\n- The municipality offers a service to retrieve data about car accidents"
+									"height": 81,
+									"text": "- The LSA has already logged in\n- The municipality offers a service to retrieve data about car accidents"
 								},
 								{
 									"_type": "UMLSeqMessageView",
@@ -16254,7 +16255,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFuSvKMFl9Hir0="
 					},
-					"name": "Role5"
+					"name": "Role5",
+					"type": ""
 				}
 			]
 		}
