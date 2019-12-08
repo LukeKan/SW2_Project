@@ -11,8 +11,8 @@ As previously explained in the component diagram, the backend application is div
 The implementation process will start from those components that create a lot of dependencies to other components (for example the QueryManager) and will continue with the remaining ones. After having unit-tested every function implemented, each component will be integrated and tested as a whole. 
 The main rationale behind the style of the development and testing that have been selected is functionality-wise rather than component-wise: instead of building a whole component as once, only the functions which are needed to perform a specific functionality are assembled. Moreover, an incremental integration and testing of such components will be performed until the functionality will be considered ready to be deployed. In order to proceed with the implementation of the SafeStreets system functionalities, the following table has been created expressing for each functionality the difficulty of implementation and testing and the level of importance to customers.
 \begin{table}[H]
-    \centering
-    \begin{tabularx}{\textwidth}{ |l|c|c| }
+    \renewcommand{\arraystretch}{0.9}
+    \begin{tabularx}{\textwidth}{ |l|c|X| }
         \hline
         Functionality & Level of importance & Difficulty \\
         \hline
